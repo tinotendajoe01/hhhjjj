@@ -1,7 +1,7 @@
-import nc from 'next-connect';
-import { isAdmin, isAuth } from '../../../../../utils/auth';
-import User from '../../../../../models/User';
-import db from '../../../../../utils/db';
+import nc from "next-connect";
+import { isAdmin, isAuth } from "../../../../../../utils/auth";
+import User from "../../../../../../models/User";
+import db from "../../../../../../utils/db";
 
 const handler = nc();
 handler.use(isAuth, isAdmin);
@@ -21,10 +21,10 @@ handler.put(async (req, res) => {
     user.isAdmin = Boolean(req.body.isAdmin);
     await user.save();
     await db.disconnect();
-    res.send({ message: 'User Updated Successfully' });
+    res.send({ message: "User Updated Successfully" });
   } else {
     await db.disconnect();
-    res.status(404).send({ message: 'User Not Found' });
+    res.status(404).send({ message: "User Not Found" });
   }
 });
 
@@ -34,10 +34,10 @@ handler.delete(async (req, res) => {
   if (user) {
     await user.remove();
     await db.disconnect();
-    res.send({ message: 'User Deleted' });
+    res.send({ message: "User Deleted" });
   } else {
     await db.disconnect();
-    res.status(404).send({ message: 'User Not Found' });
+    res.status(404).send({ message: "User Not Found" });
   }
 });
 
