@@ -1,0 +1,139 @@
+[
+  {
+    "image": "./public/repo/brand/",
+    "title": "Dercos Anti Pelliculaire Sensitive Shampooing 200 ml",
+    "description": "Vichy Dercos Anti-Dandruff Sensitive Treatment Shampoo, works on the recurrent dandruff from the 1st application.",
+    "price": "7",
+    "id": "76",
+    "category": "Hair Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000579_P017799_1.jpg",
+    "title": "Dercos Detox Purifiant Cheveux Gras 250 ml ",
+    "description": "Purifying shampoo for hair & scalp which tend to get oily quickly.",
+    "price": "700",
+    "id": "706",
+    "category": "Hair Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000492_P001635_1.png",
+    "title": "Dercos Anti Pelliculaire Sensitive Shampooing 200 ml",
+    "description": "Vichy Dercos Anti-Dandruff Sensitive Treatment Shampoo, works on the recurrent dandruff from the 1st application.",
+    "price": "7",
+    "id": "6",
+    "category": "Hair Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000551_P016499_1.png",
+    "title": "Dercos Detox Purifiant Cheveux Gras 250 ml ",
+    "description": "Purifying shampoo for hair & scalp which tend to get oily quickly.",
+    "price": "700",
+    "id": "706",
+    "category": "Hair Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000357_klorane-bebe-gel-douceur-moussant-cheveux-et-corps-500-ml.png",
+    "title": "Kloran Gel",
+    "description": "Klorane Bébé Gel Douceur Moussant Cheveux et Corps 500 ml ",
+    "price": "67",
+    "id": "89876",
+    "category": "Baby Products"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000362_P003391.png",
+    "titlee": "Mustela",
+    "description": "Mustela 2 En 1 Gel Nettoyant Cheveux et Corps 200 ml  ",
+    "price": "57",
+    "id": "8987w",
+    "category": "Baby Products"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0000370_P003399%20(2).png",
+    "titlee": "Mustela Gel",
+    "description": "Mustela Gel Lavant Doux 500 ml   ",
+    "price": "30",
+    "id": "898h7w",
+    "category": "Baby Products"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0001361_P018783.jpg",
+    "titlee": "Eluday",
+    "description": "Eluday Protect Daily mouth Care 500ml ",
+    "price": "15",
+    "id": "898",
+    "category": "Personal Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0001157_P001789.jpg",
+    "titlee": "Elmex",
+    "description": "Elmex Protection Caries Solution ",
+    "price": "15",
+    "id": "838",
+    "category": "Personal Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002503_P017220.jpg",
+    "titlee": "Galenic",
+    "description": "Galenic teint lumière spf 30 compact ",
+    "price": "45",
+    "id": "d98",
+    "category": "Skincare & Beauty"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002619_P018329.png",
+    "titlee": "Gamarde Sebo-Control",
+    "description": "Gamarde Sebo-Control Masque Clarifiant ",
+    "price": "5",
+    "id": "8",
+    "category": "Skincare & Beauty"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002312_neutrogena-visibly-clear-pore-shine-daily-wash-200-ml.png",
+    "titlee": "Gamarde Sebo-Control",
+    "description": "Neutrogena Visibly Clear Pore & Shine Daily Wash uses double action to remove excess oil and unclog pores providing a flawless-looking complexion. ",
+    "price": "52",
+    "id": "48",
+    "category": "Skincare & Beauty"
+  },
+
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0001361_P018783.jpg",
+    "titlee": "Eluday",
+    "description": "Eluday Protect Daily mouth Care 500ml ",
+    "price": "150",
+    "id": "08",
+    "category": "Personal Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0001157_P001789.jpg",
+    "titlee": "Elmex",
+    "description": "Elmex Protection Caries Solution ",
+    "price": "15",
+    "id": "839",
+    "category": "Personal Care"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002503_P017220.jpg",
+    "titlee": "Galenic",
+    "description": "Galenic teint lumière spf 30 compact ",
+    "price": "45",
+    "id": "8d908",
+    "category": "Skincare & Beauty"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002619_P018329.png",
+    "titlee": "Gamarde Sebo-Control",
+    "description": "Gamarde Sebo-Control Masque Clarifiant ",
+    "price": "95",
+    "id": "889",
+    "category": "Skincare & Beauty"
+  },
+  {
+    "image": "https://azurmindstorage.blob.core.windows.net/medactiv/0002312_neutrogena-visibly-clear-pore-shine-daily-wash-200-ml.png",
+    "titlee": "Gamarde Sebo-Control",
+    "description": "Neutrogena Visibly Clear Pore & Shine Daily Wash uses double action to remove excess oil and unclog pores providing a flawless-looking complexion. ",
+    "price": "56",
+    "id": "84998",
+    "category": "Skincare & Beauty"
+  }
+]
