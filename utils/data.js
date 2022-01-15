@@ -263,7 +263,7 @@ const data = {
     },
     {
       name: "Optive Fusion",
-      slug: "optivefusion",
+      slug: "optivefusioncare",
       category: "Eye Care",
       image: "/products/eyes/eyes (3).png",
       price: 13,
