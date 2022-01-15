@@ -39,7 +39,8 @@
     "react-responsive-carousel": "^3.2.22",
     "redux-persist": "^6.0.0",
     "stripe": "^8.195.0",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "webpack": "^5.66.0"
   },
   "license": "MIT",
   "devDependencies": {
