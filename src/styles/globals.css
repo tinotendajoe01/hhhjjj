@@ -3,6 +3,110 @@
 @tailwind utilities;
 
 @layer components {
+  .burger .line1 {
+    width: 12.5px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .burger .line2 {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .burger .line3 {
+    width: 12.5px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav-links {
+    overflow-x: hidden !important;
+    position: absolute;
+    right: 0px;
+    height: 96vh;
+    top: 0vh;
+    background-color: rgba(255, 255, 255, 0.932);
+    /* display: hidden; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100vw !important;
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    z-index: 1000;
+  }
+  .nav-links li {
+    opacity: 1;
+    color: red;
+  }
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  /*add animations to a tags*/
+  @-webkit-keyframes navLinksFade {
+    from {
+      opacity: 0;
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  @keyframes navLinksFade {
+    from {
+      opacity: 0;
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
   .link {
     @apply cursor-pointer;
   }

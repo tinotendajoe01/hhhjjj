@@ -74,12 +74,11 @@ const SearchDesktop = ({ searchInput, value }) => {
                     <TableCell align="right">${value.price}</TableCell>
                     <TableCell align="right">
                       <Button
-                        onClick={() => addToCartHandler(value)}
                         variant="contained"
                         className="button"
                         color="primary"
                       >
-                        Bag
+                        ---
                       </Button>
                     </TableCell>
                   </TableRow>
