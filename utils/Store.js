@@ -1,16 +1,16 @@
-// import { createContext } from "react";
 import Cookies from "js-cookie";
 import { createContext, useReducer } from "react";
 
 export const Store = createContext();
 const initialState = {
+  darkMode: Cookies.get("darkMode") === "ON" ? true : false,
   cart: {
     cartItems: Cookies.get("cartItems")
       ? JSON.parse(Cookies.get("cartItems"))
       : [],
-    deliveryAddress: Cookies.get("deliveryAddress")
-      ? JSON.parse(Cookies.get("deliveryAddress"))
-      : {},
+    shippingAddress: Cookies.get("shippingAddress")
+      ? JSON.parse(Cookies.get("shippingAddress"))
+      : { location: {} },
     paymentMethod: Cookies.get("paymentMethod")
       ? Cookies.get("paymentMethod")
       : "",
@@ -22,6 +22,10 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
+    case "DARK_MODE_ON":
+      return { ...state, darkMode: true };
+    case "DARK_MODE_OFF":
+      return { ...state, darkMode: false };
     case "CART_ADD_ITEM": {
       const newItem = action.payload;
       const existItem = state.cart.cartItems.find(
@@ -35,7 +39,6 @@ function reducer(state, action) {
       Cookies.set("cartItems", JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
-
     case "CART_REMOVE_ITEM": {
       const cartItems = state.cart.cartItems.filter(
         (item) => item._id !== action.payload._id
@@ -43,24 +46,25 @@ function reducer(state, action) {
       Cookies.set("cartItems", JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
-
-    case "SAVE_DELIVERY_ADDRESS":
-      // const deliveryAddress = action.payload;
-      // Cookies.set("deliveryAddress", deliveryAddress);
-      // return {
-      //   ...state,
-      //   cart: {
-      //     ...state.cart,
-      //     deliveryAddress: action.payload,
-      //   },
-      // };
+    case "SAVE_SHIPPING_ADDRESS":
       return {
         ...state,
         cart: {
           ...state.cart,
-          deliveryAddress: {
-            ...state.cart.deliveryAddress,
+          shippingAddress: {
+            ...state.cart.shippingAddress,
             ...action.payload,
+          },
+        },
+      };
+    case "SAVE_SHIPPING_ADDRESS_MAP_LOCATION":
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          shippingAddress: {
+            ...state.cart.shippingAddress,
+            location: action.payload,
           },
         },
       };
@@ -71,20 +75,19 @@ function reducer(state, action) {
       };
     case "CART_CLEAR":
       return { ...state, cart: { ...state.cart, cartItems: [] } };
-
     case "USER_LOGIN":
       return { ...state, userInfo: action.payload };
-
     case "USER_LOGOUT":
       return {
         ...state,
         userInfo: null,
         cart: {
           cartItems: [],
-          deliveryAddress: {},
+          shippingAddress: { location: {} },
           paymentMethod: "",
         },
       };
+
     default:
       return state;
   }

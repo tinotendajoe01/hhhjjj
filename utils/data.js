@@ -1,10 +1,11 @@
+import { ExpansionPanelDetails } from "@material-ui/core";
 import bcrypt from "bcryptjs";
 const data = {
   users: [
     {
       name: "Joe",
-      email: "admin@example.com",
-      password: bcrypt.hashSync("123456"),
+      email: "tinotendajoe01@gmail.com",
+      password: bcrypt.hashSync("tinotendA01!"),
       isAdmin: true,
     },
     {
@@ -33,6 +34,7 @@ const data = {
       category: "Cosmetics",
       image: "/products/cosmetics/cosmetics (9).png",
       price: 33,
+      isFeatured: true,
       brand: "Roger & Gallet",
       rating: 4.5,
       numReviews: 10,
@@ -58,6 +60,7 @@ const data = {
       image: "/products/eyes/eyes (11).png",
       price: 13,
       brand: "Murine",
+      isFeatured: true,
       rating: 4.5,
       numReviews: 10,
       countInStock: 20,
@@ -68,6 +71,7 @@ const data = {
       slug: "furterer",
       category: "Skin Care",
       image: "/products/demo (4).png",
+      isFeatured: true,
       price: 20,
       brand: "Okara",
       rating: 3.5,
@@ -107,6 +111,7 @@ const data = {
       image: "/products/cosmetics/cosmetics (1).png",
       price: "45",
       brand: "FURTERER",
+      isFeatured: true,
       rating: 4.5,
       numReviews: 10,
       countInStock: 20,
@@ -274,6 +279,12 @@ const data = {
       description:
         "For relief, comfort and sustained protection from dry eye symptoms",
     },
+  ],
+  cats: [
+    { name: "Pills", image: "/products/categories/pills.svg" },
+    { name: "Rx", image: "/products/categories/prescription.svg" },
+    { name: "Rx", image: "/products/categories/prescription-bottle.svg" },
+    { name: "Baby", image: "/products/categories/baby.svg" },
   ],
 };
 export default data;
