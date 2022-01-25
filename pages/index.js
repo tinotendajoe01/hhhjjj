@@ -53,7 +53,6 @@ export default function Home({ topRatedProducts, featuredProducts }) {
                         src={product.image}
                         layout="fill"
                         objectFit="contain"
-                        //   objectFit="cover"
                         className="rounded-2xl"
                       />
                     </div>
