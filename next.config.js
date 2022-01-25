@@ -1,3 +1,5 @@
+// require("dotenv").config();
+import "dotenv/config";
 module.exports = {
   images: {
     domains: [
