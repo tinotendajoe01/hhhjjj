@@ -3,7 +3,6 @@ require("dotenv").config();
 const connection = {};
 
 async function connect() {
-  console.log("start debuging here");
   if (connection.isConnected) {
     console.log("already connected");
     return;
@@ -21,7 +20,7 @@ async function connect() {
     useUnifiedTopology: true,
   });
   console.log("new connection");
-  connection.isConnected = db.connections[0].readyState;
+  // connection.isConnected = db.connections[0].readyState;
 }
 
 async function disconnect() {
