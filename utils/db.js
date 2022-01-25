@@ -16,7 +16,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = mongoose.connect(MONGODB_URI, {
+  const db = mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

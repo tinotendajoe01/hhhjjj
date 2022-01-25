@@ -11,9 +11,6 @@ module.exports = {
 
     return config;
   },
-  env:{
-    MONGODB_URI =process.env.MONGODB_URI
-  },
 
   images: {
     domains: [
