@@ -14,10 +14,12 @@ import useStyles from "../utils/styles";
 import Image from "next/image";
 import { ShoppingBagIcon } from "@heroicons/react/solid";
 import SliderHero from "../components/SliderHero";
+// require("dotenv").config();
 
 import Rating from "@material-ui/lab/Rating";
 
 export default function Home(props) {
+  // console.log(process.env);
   // const classes = useStyles();
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
