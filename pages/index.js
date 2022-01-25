@@ -8,9 +8,9 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { Store } from "../utils/Store";
-import ProductItem from "../components/ProductItem";
+
 import Header from "../components/Header";
-import useStyles from "../utils/styles";
+
 import Image from "next/image";
 import { ShoppingBagIcon } from "@heroicons/react/solid";
 import SliderHero from "../components/SliderHero";
