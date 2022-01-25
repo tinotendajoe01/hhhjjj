@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 require("dotenv").config();
-
 const connection = {};
 
 async function connect() {
+  console.log("start debuging here");
   if (connection.isConnected) {
     console.log("already connected");
     return;
@@ -16,7 +16,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = mongoose.connect(process.env.MONGODB_URI, {
+  const db = await mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
