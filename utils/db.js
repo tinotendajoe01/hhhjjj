@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+require("dotenv").config();
 const connection = {};
 
 async function connect() {
@@ -40,6 +40,6 @@ function convertDocToObj(doc) {
   doc.updatedAt = doc.updatedAt.toString();
   return doc;
 }
-
+console.log(process.env.MONGODB_URI);
 const db = { connect, disconnect, convertDocToObj };
 export default db;
