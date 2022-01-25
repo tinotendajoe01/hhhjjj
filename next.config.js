@@ -11,6 +11,7 @@ module.exports = {
 
     return config;
   },
+
   images: {
     domains: [
       "links.papareact.com",
