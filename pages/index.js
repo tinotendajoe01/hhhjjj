@@ -18,12 +18,12 @@ import SliderHero from "../components/SliderHero";
 
 import Rating from "@material-ui/lab/Rating";
 
-export default function Home(props) {
+export default function Home({ topRatedProducts, featuredProducts }) {
   // console.log(process.env);
   // const classes = useStyles();
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
-  const { topRatedProducts, featuredProducts } = props;
+
   const addToCartHandler = async (product) => {
     const existItem = state.cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
