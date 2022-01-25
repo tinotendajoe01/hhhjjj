@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-require("dotenv").config();
+// require("dotenv").config();
+import "dotenv/config";
 const connection = {};
 
 async function connect() {
