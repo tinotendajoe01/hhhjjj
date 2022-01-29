@@ -33,11 +33,12 @@
 //     } else {
 //       console.log("not disconnected");
 //     }
-//     // d4v3@!07
+//
 //   }
 // }
-import mongoose from "mongoose";
 require("dotenv").config();
+import mongoose from "mongoose";
+
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
