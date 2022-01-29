@@ -37,7 +37,7 @@ import { useSnackbar } from "notistack";
 import axios from "axios";
 import { useEffect } from "react";
 
-export default function Layout({ title, description,favicon, children }) {
+export default function Layout({ title, description, favicon, children }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const { darkMode, cart, userInfo } = state;
@@ -119,26 +119,30 @@ export default function Layout({ title, description,favicon, children }) {
     dispatch({ type: "USER_LOGOUT" });
     Cookies.remove("userInfo");
     Cookies.remove("cartItems");
-    Cookies.remove("shippinhAddress");
+    Cookies.remove("shippingAddress");
     Cookies.remove("paymentMethod");
     router.push("/");
   };
   return (
     <div>
       <Head>
-<title>
+        <title>
           {title ? `${title} - Kenlink Pharmacies` : "Kenlink Pharmacies"}
         </title>
-        {description && <meta name="description" content={description}/>}
-        {favicon ?   <link rel="shortcut icon" href="/logo2.png" type="image/x-icon"/>:<link rel="shortcut icon" href="/logo2.png" type="image/x-icon"/>}
+        {description && <meta name="description" content={description} />}
+        {favicon ? (
+          <link rel="shortcut icon" href="/logo2.png" type="image/x-icon" />
+        ) : (
+          <link rel="shortcut icon" href="/logo2.png" type="image/x-icon" />
+        )}
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-       
+
         <Container className={classes.main}>{children}</Container>
-        {/* <footer className={classes.footer}>
-          <Typography>All rights reserved. Next Amazona.</Typography>
-        </footer> */}
+        <footer className=" bottom-0 text-center text-black font-italic  font-semibold">
+          <Typography>Powered By ZwGoDigital</Typography>
+        </footer>
       </ThemeProvider>
     </div>
   );

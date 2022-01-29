@@ -6,7 +6,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Store } from "../utils/Store";
 
 import Header from "../components/Header";
@@ -21,6 +21,7 @@ export default function Home({ topRatedProducts, featuredProducts }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
 
+  const { userInfo } = state;
   const addToCartHandler = async (product) => {
     const existItem = state.cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
@@ -32,6 +33,11 @@ export default function Home({ topRatedProducts, featuredProducts }) {
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
     router.push("/cart");
   };
+  useEffect(() => {
+    if (!userInfo) {
+      router.push("/login?redirect=/");
+    }
+  }, []);
   return (
     <>
       <Header />

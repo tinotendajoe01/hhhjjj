@@ -1,14 +1,14 @@
 module.exports = {
-  // webpack: (config, { isServer }) => {
-  //   // Fixes npm packages that depend on `fs` module
-  //   if (!isServer) {
-  //     config.node = {
-  //       fs: "empty",
-  //     };
-  //   }
+  webpack: (config, { isServer }) => {
+    // Fixes npm packages that depend on `fs` module
+    if (!isServer) {
+      config.node = {
+        fs: "empty",
+      };
+    }
 
-  //   return config;
-  // },
+    return config;
+  },
 
   images: {
     domains: [
@@ -24,8 +24,5 @@ module.exports = {
       "medorange.com",
       "127.0.0.1:5501/products.json",
     ],
-  },
-  env: {
-    stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
   },
 };

@@ -286,5 +286,22 @@ const data = {
     { name: "Rx", image: "/products/categories/prescription-bottle.svg" },
     { name: "Baby", image: "/products/categories/baby.svg" },
   ],
+  options: [
+    {
+      name: "schedule",
+      image: "/products/account/calendar.svg",
+      kkk: "schedule",
+    },
+    {
+      name: "Pocket",
+      image: "/products/account/money-check-alt.svg",
+      url: "/schhedule",
+    },
+    {
+      name: "Locate",
+      image: "/products/account/location-arrow.svg",
+      url: "/schehhdule",
+    },
+  ],
 };
 export default data;

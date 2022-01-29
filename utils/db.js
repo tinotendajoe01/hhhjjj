@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-require("dotenv").config();
+// require("dotenv").config();
+import 'dotenv/config'
 const connection = {};
 
 async function connect() {
@@ -20,7 +21,7 @@ async function connect() {
     useUnifiedTopology: true,
   });
   console.log("new connection");
-  // connection.isConnected = db.connections[0].readyState;
+  connection.isConnected = db.connections[0].readyState;
 }
 
 async function disconnect() {
@@ -31,6 +32,7 @@ async function disconnect() {
     } else {
       console.log("not disconnected");
     }
+    // d4v3@!07
   }
 }
 
