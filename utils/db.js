@@ -83,7 +83,7 @@ function convertDocToObj(doc) {
   return doc;
 }
 console.log(process.env.MONGODB_URI);
-// const db = { connect, disconnect, convertDocToObj };
+// const db = { connect, disconnect, convertDocToObj }///;
 const db = { Createdb, convertDocToObj };
 
 export default db;
