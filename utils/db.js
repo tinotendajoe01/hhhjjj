@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
-// require("dotenv").config();
-import 'dotenv/config'
+require("dotenv").config();
+// require("dotenv").config({ path: "ENV_FILENAME" });
+// import 'dotenv/config'
 const connection = {};
 
 async function connect() {
