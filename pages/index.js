@@ -171,6 +171,8 @@ export default function Home({ topRatedProducts, featuredProducts }) {
 
 export async function getServerSideProps() {
   await db.connect();
+  // await db.Createdb();
+
   const featuredProductsDocs = await Product.find(
     { isFeatured: true },
     "-reviews"
