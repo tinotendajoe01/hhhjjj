@@ -792,7 +792,7 @@ a {
 
   @layer base {
     body {
-      /* overflow: hidden; */
+    
       @apply bg-[#F8F9FA];
     }
   }
