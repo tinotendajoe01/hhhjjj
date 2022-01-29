@@ -290,7 +290,7 @@ const data = {
     {
       name: "schedule",
       image: "/products/account/calendar.svg",
-      kkk: "schedule",
+      url: "schedule",
     },
     {
       name: "Pocket",
