@@ -27,6 +27,8 @@ import { useSnackbar } from "notistack";
 import { getError } from "../../utils/error";
 import Header from "../../components/Header";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import Product from "../../models/Product";
+import db from "../../utils/db";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -62,7 +64,7 @@ function reducer(state, action) {
   }
 }
 
-function Order({ params }) {
+function Order({ params, products }) {
   const orderId = params.id;
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
   const classes = useStyles();
@@ -196,7 +198,7 @@ function Order({ params }) {
 
   return (
     <>
-      <Header />
+      <Header products={products} />
       <Layout title={`Order ${orderId}`}>
         <Typography component="h1" variant="h1">
           Order {orderId}
@@ -401,8 +403,12 @@ function Order({ params }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
-  return { props: { params } };
-}
-
 export default dynamic(() => Promise.resolve(Order), { ssr: false });
+export async function getServerSideProps({ params }) {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+
+  return { props: { products: products.map(db.convertDocToObj), params } };
+}

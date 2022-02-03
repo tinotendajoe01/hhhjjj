@@ -1,5 +1,5 @@
 import { SearchIcon, XIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
 import NextLink from "next/link";
 import {
@@ -21,7 +21,23 @@ import {
 } from "@material-ui/core";
 import data from "../utils/data";
 import { useRouter } from "next/router";
-const SearchMobilePanel = () => {
+import { Store } from "../utils/Store";
+import axios from "axios";
+const SearchMobilePanel = (props) => {
+  const addToCartHandler = async (product) => {
+    const existItem = state.cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+    router.push("/cart");
+  };
+  const { state, dispatch } = useContext(Store);
+  const { cart, userInfo } = state;
+  const products = props.products;
   const router = useRouter();
   const [searchInputMobile, setSearchInputMobile] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -30,7 +46,7 @@ const SearchMobilePanel = () => {
     const searchInput = e.target.value.toLowerCase();
     setQuery(e.target.value);
     setWordEntered(searchInput);
-    const newFilterMobile = data.products.filter((product) =>
+    const newFilterMobile = products.filter((product) =>
       product.name.toLowerCase().includes(searchInput)
     );
     if (searchInput === "") {

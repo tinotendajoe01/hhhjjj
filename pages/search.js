@@ -53,7 +53,8 @@ export default function Search(props) {
     rating = "all",
     sort = "featured",
   } = router.query;
-  const { products, countProducts, categories, brands, pages } = props;
+  const { products, products1, countProducts, categories, brands, pages } =
+    props;
 
   const filterSearch = ({
     page,
@@ -116,7 +117,7 @@ export default function Search(props) {
   };
   return (
     <>
-      <Header />
+      <Header products={products1} />
       <Layout title="Search">
         <Grid className={classes.mt1} container spacing={1}>
           <Grid item md={3}>
@@ -336,6 +337,8 @@ export async function getServerSideProps({ query }) {
     ...brandFilter,
     ...ratingFilter,
   });
+  const products1 = await Product.find({}).lean();
+
   await db.disconnect();
 
   const products = productDocs.map(db.convertDocToObj);
@@ -348,6 +351,7 @@ export async function getServerSideProps({ query }) {
       pages: Math.ceil(countProducts / pageSize),
       categories,
       brands,
+      products1: products1.map(db.convertDocToObj),
     },
   };
 }

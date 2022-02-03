@@ -19,14 +19,22 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import {
+  Grid,
   AppBar,
   Toolbar,
+  Select,
   Typography,
   Container,
   Link,
   createMuiTheme,
+  TableContainer,
+  Table,
   ThemeProvider,
   CssBaseline,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
   Switch,
   Badge,
   Button,
@@ -52,20 +60,55 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import SearchMobilePanel from "./SearchMobilePanel";
 import UploadMobilePanel from "./UploadMobilePanel";
-const Header = ({ title, description }) => {
+const Header = ({ title, description, products }) => {
+  const addToCartHandler = async (product) => {
+    const existItem = state.cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+    router.push("/cart");
+  };
   const { state, dispatch } = useContext(Store);
   const { cart, userInfo } = state;
 
   const router = useRouter();
 
+  // const [query, setQuery] = useState("");
+  // const queryChangeHandler = (e) => {
+  //   setQuery(e.target.value);
+  // };
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   router.push(`/search?query=${query}`);
+  // };
+
+  // const runSearch = () => {
+  //   router.push(`/search?query=${query}`);
+  // };
+  const [wordEntered, setWordEntered] = useState("");
+
+  const [searchInput, setSearchInput] = useState([]);
   const [query, setQuery] = useState("");
-  const queryChangeHandler = (e) => {
+  const startSearchFilter = (e) => {
+    const searchInputText = e.target.value.toLowerCase();
     setQuery(e.target.value);
+    setWordEntered(searchInputText);
+    const newFilter = products.filter((product) =>
+      product.name.toLowerCase().includes(searchInputText)
+    );
+    if (searchInputText === "") {
+      setSearchInput([]);
+    } else setSearchInput(newFilter);
   };
-  const submitHandler = (e) => {
-    e.preventDefault();
-    router.push(`/search?query=${query}`);
+  const clearSearch = () => {
+    setSearchInput([]);
+    setWordEntered("");
   };
+
   const runSearch = () => {
     router.push(`/search?query=${query}`);
   };
@@ -181,7 +224,7 @@ const Header = ({ title, description }) => {
                   <MenuItem
                     onClick={(e) => loginMenuCloseHandler(e, "/order-history")}
                   >
-                    Order Hisotry
+                    Order History
                   </MenuItem>
                   {userInfo.isAdmin && (
                     <MenuItem
@@ -205,18 +248,24 @@ const Header = ({ title, description }) => {
           <div className=" hidden sm:flex -mt-5 items-center shadow-sm border border-gray-900  h-10 rounded-full flex-grow cursor-pointer bg-gray-900">
             <input
               name="query"
-              onChange={queryChangeHandler}
+              // onChange={queryChangeHandler}
+              onChange={startSearchFilter}
               type="text"
-              placeholder="Start your search"
+              value={wordEntered}
+              placeholder="Search by name..."
               className="p-2 text-white input px-4 h-full w-6 flex-grow  rounded-full flex-shrink focus:outline-none bg-transparent"
             />
 
-            <SearchIcon
-              onClick={runSearch}
-              className="h-12 p-4 text-white "
-              // placeholder="Start Searching Meds"
-            />
+            {searchInput.length === 0 ? (
+              <SearchIcon
+                onClick={runSearch}
+                className="h-12 p-4 text-white "
+              />
+            ) : (
+              <XIcon onClick={clearSearch} className="h-12 p-4 text-white " />
+            )}
           </div>
+
           <div className="flex flex-grow items-center justify-between sm:flex-grow-0 -mt-5">
             <Image
               onClick={() => router.push("/")}
@@ -281,10 +330,12 @@ const Header = ({ title, description }) => {
           <li onClick={searchMobileOpenHandler}>
             <SearchIcon className="h-5 search__iconMobile cursor-pointer  sm:hidden xl:hidden lg:hidden" />
           </li>
-
-          <li className="cursor-pointer ">Deals</li>
-
-          <li className="cursor-pointer ">Gifts</li>
+          <NextLink href="/gift" passHref>
+            <li className="cursor-pointer ">Deals</li>
+          </NextLink>
+          <NextLink href="/gift" passHref>
+            <li className="cursor-pointer ">Gifts</li>
+          </NextLink>
           <li onClick={uploadMobileOpenHandler} className="cursor-pointer ">
             Upload Rx
           </li>
@@ -300,6 +351,65 @@ const Header = ({ title, description }) => {
             Health & Personal Care
           </li>
         </div>
+        <div className="flex items-center">
+          <Grid item md={9} xs={12}>
+            <TableContainer>
+              <Table>
+                <TableBody>
+                  {searchInput.slice(0, 5).map((product) => (
+                    <TableRow key={product._id}>
+                      <TableCell>
+                        <NextLink href={`/product/${product.slug}`} passHref>
+                          <Link>
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              width={50}
+                              height={50}
+                            ></Image>
+                          </Link>
+                        </NextLink>
+                      </TableCell>
+
+                      <TableCell>
+                        <NextLink href={`/product/${product.slug}`} passHref>
+                          <Link>
+                            <Typography>{product.name}</Typography>
+                          </Link>
+                        </NextLink>
+                      </TableCell>
+                      <TableCell align="right">
+                        <Select
+                          value={product.quantity}
+                          onChange={(e) =>
+                            updateCartHandler(item, e.target.value)
+                          }
+                        >
+                          {[...Array(product.countInStock).keys()].map((x) => (
+                            <MenuItem key={x + 1} value={x + 1}>
+                              {x + 1}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </TableCell>
+                      <TableCell align="right">${product.price}</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          onClick={() => addToCartHandler(product)}
+                          variant="contained"
+                          className="button"
+                          color="primary"
+                        >
+                          Bag
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Grid>
+        </div>
         <div>
           <div>
             <Drawer
@@ -307,7 +417,7 @@ const Header = ({ title, description }) => {
               open={searchMobileVisible}
               onClose={searchMobileCloseHandler}
             >
-              <SearchMobilePanel />
+              <SearchMobilePanel products={products} />
             </Drawer>
           </div>
         </div>

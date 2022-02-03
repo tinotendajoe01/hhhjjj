@@ -40,7 +40,7 @@ import axios from "axios";
 import Layout from "../components/Layout";
 import Options from "../models/Options";
 
-const Account = ({ topRatedProducts, accountOptions }) => {
+const Account = ({ topRatedProducts, accountOptions, products }) => {
   const { state, dispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -83,14 +83,14 @@ const Account = ({ topRatedProducts, accountOptions }) => {
 
   return (
     <div className="App">
-      <Header />
+      <Header products={products} />
       <Layout title="Account">
         <main className="flex  ">
           <div className=" mainContainer ">
             {/* Banner  */}
             <div className="banner shadow-lg border-2 border-gray-900">
               {userInfo ? (
-                <BannerName name={userInfo.name} discount={"20"} more={"#"} />
+                <BannerName name={userInfo.name} discount={"30"} more={"#"} />
               ) : (
                 <BannerName name={"there!"} discount={"20"} more={"#"} />
               )}
@@ -150,6 +150,8 @@ const Account = ({ topRatedProducts, accountOptions }) => {
 export default Account;
 export async function getServerSideProps() {
   await db.connect();
+  const products = await Product.find({}).lean();
+
   const accountOptions = await Options.find({}).lean();
   const topRatedProductsDocs = await Product.find({}, "-reviews")
     .lean()
@@ -160,6 +162,8 @@ export async function getServerSideProps() {
   await db.disconnect();
   return {
     props: {
+      products: products.map(db.convertDocToObj),
+
       topRatedProducts: topRatedProductsDocs.map(db.convertDocToObj),
       accountOptions: accountOptions.map(db.convertDocToObj),
     },

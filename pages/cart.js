@@ -31,7 +31,9 @@ import {
 import axios from "axios";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
-function CartScreen() {
+import Product from "../models/Product";
+import db from "../utils/db";
+function CartScreen({ products }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const {
@@ -53,7 +55,7 @@ function CartScreen() {
   };
   return (
     <>
-      <Header />
+      <Header products={products} />
       <Layout title="Shopping Bag">
         <main>
           <div className="text-center">
@@ -179,3 +181,14 @@ function CartScreen() {
 }
 
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
+}

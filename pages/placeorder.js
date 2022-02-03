@@ -28,7 +28,9 @@ import { useSnackbar } from "notistack";
 import { getError } from "../utils/error";
 import Cookies from "js-cookie";
 import Header from "../components/Header";
-function PlaceOrder() {
+import Product from "../models/Product";
+import db from "../utils/db";
+function PlaceOrder({ products }) {
   const classes = useStyles();
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
@@ -86,7 +88,7 @@ function PlaceOrder() {
   };
   return (
     <>
-      <Header />
+      <Header products={products} />
       <Layout title="Cornfirm  Order">
         <CheckoutWizard activeStep={3}></CheckoutWizard>
         <Typography component="h1" variant="h1">
@@ -250,3 +252,14 @@ function PlaceOrder() {
 }
 
 export default dynamic(() => Promise.resolve(PlaceOrder), { ssr: false });
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
+}

@@ -65,6 +65,37 @@ function AdminDashboard() {
     };
     fetchData();
   }, []);
+
+  //grabb time inteli
+  const date = new Date();
+  const hour = date.getHours();
+  const min = date.getMinutes();
+  const sec = date.getSeconds();
+  function clock() {
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    var midday;
+
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    midday = hour >= 12 ? "PM" : "AM";
+    var time = setTimeout(function () {
+      clock();
+    }, 1000);
+  }
+
+  function updateTime(k) {
+    if (k < 10) {
+      return "0" + k;
+    } else {
+      return k;
+    }
+  }
+
+  clock();
   return (
     <>
       <Header />
@@ -95,7 +126,26 @@ function AdminDashboard() {
                 </NextLink>
               </List>
             </Card>
-            <Typography>Good Morning {userInfo.name}!</Typography>
+            <>
+              {hour >= 12 ? (
+                hour >= 16 ? (
+                  <Typography component="h1" variant="h1">
+                    Good Evening {userInfo.name}!
+                  </Typography>
+                ) : (
+                  <Typography component="h1" variant="h1">
+                    Good Afternoon {userInfo.name}!
+                  </Typography>
+                )
+              ) : (
+                <Typography component="h1" variant="h1">
+                  Good Evening {userInfo.name}!
+                </Typography>
+              )}
+            </>
+            <div>
+              {hour}:{min}:{sec}
+            </div>
           </Grid>
 
           <Grid item md={9} xs={12}>

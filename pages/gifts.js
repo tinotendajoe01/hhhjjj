@@ -17,7 +17,7 @@ import SliderHero from "../components/SliderHero";
 
 import Rating from "@material-ui/lab/Rating";
 
-export default function Home({ products, topRatedProducts, featuredProducts }) {
+export default function Gifts({ products, giftsProducts }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
 
@@ -43,15 +43,15 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
       <Header products={products} />
       <Layout description="lorem">
         <main className="max-w-7xl m-auto">
-          <SliderHero />
+          {/* <SliderHero /> */}
           <section>
             <div className="pl-1 font-bold text-xl">
               <Typography className="pl-1 font-bold text-xl " variant="h5">
-                Best Sellers
+                Gift Sets
               </Typography>
             </div>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {topRatedProducts?.map((product) => (
+              {giftsProducts?.map((product) => (
                 <div className="border bg-[#F8F9FA] rounded-xl shadow-sm z-30">
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
@@ -92,7 +92,7 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
               Featured
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {featuredProducts?.map((product) => (
+              {giftsProducts?.map((product) => (
                 <div className="border bg-transparent rounded-xl shadow-sm ">
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
@@ -130,7 +130,7 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
               Recommended
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {featuredProducts?.map((product) => (
+              {giftsProducts?.map((product) => (
                 <div className="border bg-transparent rounded-xl shadow-sm ">
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
@@ -173,10 +173,7 @@ export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find({}).lean();
 
-  const featuredProductsDocs = await Product.find(
-    { isFeatured: true },
-    "-reviews"
-  )
+  const giftsProductsDocs = await Product.find({ isGift: true }, "-reviews")
     .lean()
     .limit(3);
   const topRatedProductsDocs = await Product.find({}, "-reviews")
@@ -189,7 +186,7 @@ export async function getServerSideProps() {
   return {
     props: {
       products: products.map(db.convertDocToObj),
-      featuredProducts: featuredProductsDocs.map(db.convertDocToObj),
+      giftsProducts: giftsProductsDocs.map(db.convertDocToObj),
       topRatedProducts: topRatedProductsDocs.map(db.convertDocToObj),
     },
   };

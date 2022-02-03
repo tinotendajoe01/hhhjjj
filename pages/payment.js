@@ -17,8 +17,10 @@ import {
   Typography,
 } from "@material-ui/core";
 import { useSnackbar } from "notistack";
+import Product from "../models/Product";
+import db from "../utils/db";
 
-export default function Payment() {
+export default function Payment({ products }) {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const classes = useStyles();
   const router = useRouter();
@@ -47,7 +49,7 @@ export default function Payment() {
   };
   return (
     <>
-      <Header />
+      <Header products={products} />
       <Layout title="Payment Method">
         <CheckoutWizard activeStep={2}></CheckoutWizard>
         <form className="shadow-xl max-w-4xl m-auto " onSubmit={submitHandler}>
@@ -109,4 +111,15 @@ export default function Payment() {
       </Layout>
     </>
   );
+}
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
 }

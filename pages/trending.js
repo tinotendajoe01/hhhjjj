@@ -43,7 +43,7 @@ import DebitCard from "../components/DebitCard";
 import Layout from "../components/Layout";
 import Cats from "../models/Cats";
 
-const all = ({ topRatedProducts, cats }) => {
+const all = ({ topRatedProducts, cats, products }) => {
   const { state, dispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -81,7 +81,7 @@ const all = ({ topRatedProducts, cats }) => {
 
   return (
     <div className="App">
-      <Header />
+      <Header products={products} />
       <Layout title="Trending">
         <main className="flex  ">
           <div className=" mainContainer ">
@@ -282,6 +282,8 @@ export default all;
 export async function getServerSideProps() {
   await db.connect();
   const cats = await Cats.find({}).lean();
+  const products = await Product.find({}).lean();
+
   const topRatedProductsDocs = await Product.find({}, "-reviews")
     .lean()
     .sort({
@@ -291,6 +293,8 @@ export async function getServerSideProps() {
   await db.disconnect();
   return {
     props: {
+      products: products.map(db.convertDocToObj),
+
       topRatedProducts: topRatedProductsDocs.map(db.convertDocToObj),
       cats: cats.map(db.convertDocToObj),
     },

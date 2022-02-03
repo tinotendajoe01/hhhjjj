@@ -28,15 +28,28 @@ const UploadMobilePanel = () => {
   return (
     <div className=" sm:hidden flex flex-col  px-2 items-center mt-14 mb-5 bg-white  mx-2   list-none ">
       <h1 className="font-semibold text-md">Send us your prescription</h1>
-      <div className=" flex items-center bg-gray-900 mt-2 pb-7  shadow-sm  flex-grow w-full m  h-10 rounded-md  cursor-pointer ">
-        <button className=" text-white   text-center input  h-full w-6 flex-grow outline-none  rounded-full flex-shrink focus:outline-none bg-transparent">
-          <i> Upload Your Prescription Here</i>
+      <div
+        className=" flex items-center bg-gray-900 mt-2 pb-7 
+       shadow-sm  flex-grow w-full m  h-10 rounded-md  cursor-pointer "
+      >
+        <button
+          disabled
+          className=" text-white py-5  text-center input  h-full w-6 flex-grow outline-none  rounded-full 
+        flex-shrink focus:outline-none bg-transparent"
+        >
+          <i>
+            {" "}
+            Upload Your Prescription Here{" "}
+            <span className="text-red-900 uppercase ">
+              🛑feature disabled🛑
+            </span>{" "}
+          </i>
         </button>
 
-        <div className=" text-white l">
+        {/* <div className=" text-white">
           {" "}
-          <UploadIcon className="h-5 " />
-        </div>
+          <UploadIcon className="h-5  " />
+        </div> */}
       </div>
     </div>
   );

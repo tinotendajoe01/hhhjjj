@@ -14,7 +14,9 @@ import Cookies from "js-cookie";
 import { Controller, useForm } from "react-hook-form";
 import CheckoutWizard from "../components/CheckoutWizard";
 import Header from "../components/Header";
-export default function Shipping() {
+import Product from "../models/Product";
+import db from "../utils/db";
+export default function Shipping({ products }) {
   const {
     handleSubmit,
     control,
@@ -31,6 +33,7 @@ export default function Shipping() {
   const { location } = shippingAddress;
   useEffect(() => {
     if (!userInfo) {
+      s;
       router.push("/login?redirect=/shipping");
     }
     setValue("fullName", shippingAddress.fullName);
@@ -86,7 +89,7 @@ export default function Shipping() {
   return (
     <>
       {" "}
-      <Header />
+      <Header products={products} />
       <Layout>
         <CheckoutWizard activeStep={1} />
         <form
@@ -248,9 +251,9 @@ export default function Shipping() {
               >
                 Choose on map
               </Button>
-              {/* <Typography>
-              {location.lat && `${location.lat}, ${location.lat}`}
-            </Typography> */}
+              <Typography>
+                {location.lat && `${location.lat}, ${location.lat}`}
+              </Typography>
             </ListItem>
             <ListItem>
               <Button
@@ -267,4 +270,15 @@ export default function Shipping() {
       </Layout>
     </>
   );
+}
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
 }

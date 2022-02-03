@@ -21,8 +21,10 @@ import { Controller, useForm } from "react-hook-form";
 import { useSnackbar } from "notistack";
 import Cookies from "js-cookie";
 import Header from "../components/Header";
+import Product from "../models/Product";
+import db from "../utils/db";
 
-function Profile() {
+function Profile({ products }) {
   const { state, dispatch } = useContext(Store);
   const {
     handleSubmit,
@@ -66,9 +68,13 @@ function Profile() {
       enqueueSnackbar(getError(err), { variant: "error" });
     }
   };
+  //grabb time inteli
+  const date = new Date();
+  const hour = date.getHours();
+
   return (
     <>
-      <Header />
+      <Header products={products} />
       <Layout title="Profile">
         <Grid container spacing={1}>
           <Grid item md={3} xs={12}>
@@ -96,9 +102,21 @@ function Profile() {
             <Card className={classes.section}>
               <List>
                 <ListItem>
-                  <Typography component="h1" variant="h1">
-                    Good Evening {userInfo.name}
-                  </Typography>
+                  {hour >= 12 ? (
+                    hour >= 16 ? (
+                      <Typography component="h1" variant="h1">
+                        Good Evening {userInfo.name}!
+                      </Typography>
+                    ) : (
+                      <Typography component="h1" variant="h1">
+                        Good Afternoon {userInfo.name}!
+                      </Typography>
+                    )
+                  ) : (
+                    <Typography component="h1" variant="h1">
+                      Good Evening {userInfo.name}!
+                    </Typography>
+                  )}
                 </ListItem>
                 <ListItem>
                   <form
@@ -245,3 +263,14 @@ function Profile() {
 }
 
 export default dynamic(() => Promise.resolve(Profile), { ssr: false });
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
+}
