@@ -330,10 +330,10 @@ const Header = ({ title, description, products }) => {
           <li onClick={searchMobileOpenHandler}>
             <SearchIcon className="h-5 search__iconMobile cursor-pointer  sm:hidden xl:hidden lg:hidden" />
           </li>
-          <NextLink href="/gift" passHref>
+          <NextLink href="/gifts" passHref>
             <li className="cursor-pointer ">Deals</li>
           </NextLink>
-          <NextLink href="/gift" passHref>
+          <NextLink href="/gifts" passHref>
             <li className="cursor-pointer ">Gifts</li>
           </NextLink>
           <li onClick={uploadMobileOpenHandler} className="cursor-pointer ">

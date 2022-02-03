@@ -173,9 +173,11 @@ export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find({}).lean();
 
-  const giftsProductsDocs = await Product.find({ isGift: true }, "-reviews")
-    .lean()
-    .limit(3);
+  const giftsProductsDocs = await Product.find(
+    { isGift: true },
+    "-reviews"
+  ).lean();
+  // .limit(3);
   const topRatedProductsDocs = await Product.find({}, "-reviews")
     .lean()
     .sort({
