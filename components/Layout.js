@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Head from "next/head";
 import NextLink from "next/link";
+import { createTheme } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
@@ -41,7 +42,7 @@ export default function Layout({ title, description, favicon, children }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const { darkMode, cart, userInfo } = state;
-  const theme = createMuiTheme({
+  const theme = createTheme({
     typography: {
       h1: {
         fontSize: "1.6rem",
@@ -141,7 +142,7 @@ export default function Layout({ title, description, favicon, children }) {
 
         <Container className={classes.main}>{children}</Container>
         <footer className=" bottom-0 text-center text-black font-italic  font-semibold">
-          <Typography>Powered By ZwGoDigital</Typography>
+          <Typography>Made With ❤ For Kenlink Pharmacies</Typography>
         </footer>
       </ThemeProvider>
     </div>

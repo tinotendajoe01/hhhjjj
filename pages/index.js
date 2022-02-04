@@ -52,7 +52,10 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
             </div>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
               {topRatedProducts?.map((product) => (
-                <div className="border bg-[#F8F9FA] rounded-xl shadow-sm z-30">
+                <div
+                  key={product._id}
+                  className="border bg-[#F8F9FA] rounded-xl shadow-sm z-30"
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image
@@ -93,7 +96,10 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
               {featuredProducts?.map((product) => (
-                <div className="border bg-transparent rounded-xl shadow-sm ">
+                <div
+                  key={product._id}
+                  className="border bg-transparent rounded-xl shadow-sm "
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image
@@ -131,7 +137,10 @@ export default function Home({ products, topRatedProducts, featuredProducts }) {
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
               {featuredProducts?.map((product) => (
-                <div className="border bg-transparent rounded-xl shadow-sm ">
+                <div
+                  key={product._id}
+                  className="border bg-transparent rounded-xl shadow-sm "
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image

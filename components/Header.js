@@ -280,10 +280,10 @@ const Header = ({ title, description, products }) => {
         </div>
         <div className="flex items-center space-x-3 pl-6 list-none bg-kenlink_blue-dark text-white text-sm">
           <li className="link flex items-center">
-            <div onClick={sidebarOpenHandler} class="burger  ">
-              <div class="line1 bg-dark"></div>
-              <div class="line2 bg-dark"></div>
-              <div class="line3 bg-dark"></div>
+            <div onClick={sidebarOpenHandler} className="burger  ">
+              <div className="line1 bg-dark"></div>
+              <div className="line2 bg-dark"></div>
+              <div className="line3 bg-dark"></div>
             </div>
           </li>
           <div>

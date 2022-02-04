@@ -145,7 +145,7 @@ const data = {
       isGift: true,
     },
     {
-      name: "Fog Scent",
+      name: "Fogg Scent",
       slug: "tribute2",
       category: "For Him",
       image: "/products/gifts/g (3).jpg",
@@ -158,7 +158,7 @@ const data = {
       isGift: true,
     },
     {
-      name: "For Her",
+      name: "Fogg Scent",
       slug: "tribut41",
       category: "For Him",
       image: "/products/gifts/g (3).jpg",
