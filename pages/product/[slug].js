@@ -94,7 +94,7 @@ export default function ProductScreen(props) {
       <Layout title={product.name} description={product.description}>
         <main>
           <div className="hover:animate-pulse mt-5 ">
-            <NextLink href="/" passHref>
+            <NextLink href="/shop" passHref>
               <Link>
                 <ArrowLeftIcon className="h-6 text-kenlink_blue-dark" />
               </Link>
@@ -102,13 +102,15 @@ export default function ProductScreen(props) {
           </div>
           <Grid container spacing={1}>
             <Grid item md={6} xs={12}>
-            <div     ><Image
-                src={product.image}
-                alt={product.name}
-                width={640}
-                height={640}
-                layout="responsive"
-            className="scale cursor-pointer"/>  
+              <div>
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={640}
+                  height={640}
+                  layout="responsive"
+                  className="scale cursor-pointer"
+                />
               </div>
             </Grid>
             <Grid item md={3} xs={12}>

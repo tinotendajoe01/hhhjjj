@@ -66,7 +66,7 @@ function CartScreen({ products }) {
           {cartItems.length === 0 ? (
             <div>
               Your shopping bag is empty.{" "}
-              <NextLink href="/" passHref>
+              <NextLink href="/shop" passHref>
                 <Link>Let's go shopping!</Link>
               </NextLink>
             </div>
@@ -183,7 +183,7 @@ function CartScreen({ products }) {
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });
 export async function getServerSideProps() {
   await db.connect();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
   await db.disconnect();
   return {

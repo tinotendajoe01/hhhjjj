@@ -15,6 +15,13 @@ const initialState = {
       ? Cookies.get("paymentMethod")
       : "",
   },
+  prescriptionDetails: Cookies.get("prescriptionDetails")
+    ? JSON.parse(Cookies.get("prescriptionDetails"))
+    : "",
+  patientDetails: Cookies.get("patientDetails")
+    ? JSON.parse(Cookies.get("patientDetails"))
+    : "",
+
   userInfo: Cookies.get("userInfo")
     ? JSON.parse(Cookies.get("userInfo"))
     : null,
@@ -57,6 +64,7 @@ function reducer(state, action) {
           },
         },
       };
+
     case "SAVE_SHIPPING_ADDRESS_MAP_LOCATION":
       return {
         ...state,
@@ -86,6 +94,18 @@ function reducer(state, action) {
           shippingAddress: { location: {} },
           paymentMethod: "",
         },
+      };
+    //scheduler
+    case "SAVE_PRESCRIPTION_DETAILS":
+      return {
+        ...state,
+
+        prescriptionDetails: action.payload,
+      };
+    case "SAVE_PATIENT_DETAILS":
+      return {
+        ...state,
+        patientDetails: action.payload,
       };
 
     default:

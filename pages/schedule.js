@@ -1,49 +1,125 @@
-import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
-import React, { useState } from "react";
-import Schedule from "../components/Schedule";
+import {
+  Box,
+  Button,
+  Grid,
+  List,
+  ListItem,
+  MenuItem,
+  Select,
+  Typography,
+  FormControl,
+  Input,
+  InputLabel,
+} from "@material-ui/core";
+import React, { useContext, useEffect, useState } from "react";
+import Layout from "../components/Layout";
+import SchedulerWizard from "../components/SchedulerWizard";
+import db from "../utils/db";
+import { Store } from "../utils/Store";
+import Cookies from "js-cookie";
+import useStyles from "../utils/styles";
+import Drug from "../models/Drug";
+import { Controller, useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import { useSnackbar } from "notistack";
+import Header from "../components/Header";
+const Form = ({ drugs }) => {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { state, dispatch } = useContext(Store);
+  const router = useRouter();
+  const { userInfo } = state;
+  const classes = useStyles();
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+    setValue,
+    getValues,
+  } = useForm();
+  const [selectedDrug, setSelecteDrug] = useState("");
 
-const Form = () => {
-  const [todos, setTodos] = useState([]);
-  //connect input to state
-  const [input, setInput] = useState("");
-  //
-  const addTodo = (e) => {
-    //this will fire off wen we click the btn
+  useEffect(() => {
+    if (!userInfo) {
+      router.push("/login?redirect=/schedule");
+    } else {
+      setSelecteDrug(Cookies.get("selectedDrug") || "");
+    }
+  }, []);
+
+  const submitHandler = (e) => {
+    closeSnackbar();
     e.preventDefault();
-    setTodos([...todos, input]);
-    setInput(""); /// input after submission
+    if (!selectedDrug) {
+      enqueueSnackbar("Select A drug Name", { variant: "error" });
+    } else {
+      dispatch({ type: "SAVE_DRUG_NAME", payload: selectedDrug });
+      Cookies.set("selectedDrug", selectedDrug);
+      router.push("/scheduler/dose");
+    }
   };
 
   return (
-    <center>
-      <h1>Create Schedule </h1>
-      <form className=" flex flex-col mx-10 space-y-2">
-        <FormControl>
-          <InputLabel>Add Your Schedule</InputLabel>
-          <Input
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-          />
-        </FormControl>
+    <>
+      <Header />
+      <Layout>
+        <SchedulerWizard activeStep={0} />
+        <>
+          {" "}
+          <form
+            className="shadow-xl max-w-4xl m-auto "
+            onSubmit={submitHandler}
+          >
+            <Grid>
+              <List>
+                <ListItem>
+                  <Box className={classes.fullWidth}>
+                    <Typography>Select Your Medicine</Typography>
 
-        <Button
-          button
-          disabled={!input}
-          type="submit"
-          onClick={addTodo}
-          variant="contained"
-          color="primary"
-        >
-          Add To Calendar
-        </Button>
-      </form>
-      <ul>
-        {todos.map((todo) => (
-          <Schedule todo={todo} />
-        ))}
-      </ul>
-    </center>
+                    <Select
+                      fullWidth
+                      value={selectedDrug}
+                      onChange={(e) => setSelecteDrug(e.target.value)}
+                    >
+                      <MenuItem value="all">All</MenuItem>
+                      {drugs?.map((drug) => (
+                        <MenuItem key={drug._id} value={drug.name}>
+                          {drug.name}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </Box>
+                </ListItem>
+                <ListItem>
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    fullWidth
+                    color="primary"
+                    onClick={submitHandler}
+                    disabled={!selectedDrug}
+                  >
+                    Proceed
+                  </Button>
+                </ListItem>
+              </List>
+            </Grid>
+          </form>
+        </>
+      </Layout>
+    </>
   );
 };
 
 export default Form;
+export async function getServerSideProps() {
+  await db.connect();
+
+  const drugs = await Drug.find({}).lean();
+
+  await db.disconnect();
+  return {
+    props: {
+      drugs: drugs.map(db.convertDocToObj),
+    },
+  };
+}

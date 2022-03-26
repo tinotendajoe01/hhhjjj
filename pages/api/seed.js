@@ -5,6 +5,7 @@ import data from "../../utils/data";
 import User from "../../models/User";
 import Cats from "../../models/Cats";
 import Options from "../../models/Options";
+import Drug from "../../models/Drug";
 
 const handler = nc();
 
@@ -14,6 +15,8 @@ handler.get(async (req, res) => {
   await User.insertMany(data.users);
   await Product.deleteMany();
   await Product.insertMany(data.products);
+  await Drug.deleteMany();
+  await Drug.insertMany(data.drugs);
   await Cats.deleteMany();
   await Cats.insertMany(data.cats);
   await Options.deleteMany();

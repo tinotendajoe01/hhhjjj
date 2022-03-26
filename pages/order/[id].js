@@ -123,6 +123,7 @@ function Order({ params, products }) {
         dispatch({ type: "DELIVER_RESET" });
       }
     } else {
+      ////
       const loadPaypalScript = async () => {
         const { data: clientId } = await axios.get("/api/keys/paypal", {
           headers: { authorization: `Bearer ${userInfo.token}` },
@@ -201,7 +202,7 @@ function Order({ params, products }) {
       <Header products={products} />
       <Layout title={`Order ${orderId}`}>
         <Typography component="h1" variant="h1">
-          Order {orderId}
+          Order #{orderId.substring(20, 24)}
         </Typography>
         {loading ? (
           <CircularProgress />
@@ -406,7 +407,7 @@ function Order({ params, products }) {
 export default dynamic(() => Promise.resolve(Order), { ssr: false });
 export async function getServerSideProps({ params }) {
   await db.connect();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
   await db.disconnect();
 

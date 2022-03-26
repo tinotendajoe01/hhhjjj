@@ -52,7 +52,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="max-w-4xl m-auto">
+    <div className="max-w-4xl m-auto text-black">
       <Layout title="Login">
         <form
           onSubmit={handleSubmit(submitHandler)}
@@ -62,7 +62,7 @@ export default function Login() {
             <Image
               onClick={() => router.push("/")}
               className="sm:w-1 cursor-pointer "
-              src="/logo2.png"
+              src="/zlogo (6).png"
               width={150}
               height={40}
               objectFit="contain"

@@ -39,9 +39,8 @@ import axios from "axios";
 import { useEffect } from "react";
 
 export default function Layout({ title, description, favicon, children }) {
-  const router = useRouter();
   const { state, dispatch } = useContext(Store);
-  const { darkMode, cart, userInfo } = state;
+  const { cart, userInfo, darkMode } = state;
   const theme = createTheme({
     typography: {
       h1: {
@@ -67,63 +66,6 @@ export default function Layout({ title, description, favicon, children }) {
   });
   const classes = useStyles();
 
-  const [sidbarVisible, setSidebarVisible] = useState(false);
-  const sidebarOpenHandler = () => {
-    setSidebarVisible(true);
-  };
-  const sidebarCloseHandler = () => {
-    setSidebarVisible(false);
-  };
-
-  const [categories, setCategories] = useState([]);
-  const { enqueueSnackbar } = useSnackbar();
-
-  const fetchCategories = async () => {
-    try {
-      const { data } = await axios.get(`/api/products/categories`);
-      setCategories(data);
-    } catch (err) {
-      enqueueSnackbar(getError(err), { variant: "error" });
-    }
-  };
-
-  const [query, setQuery] = useState("");
-  const queryChangeHandler = (e) => {
-    setQuery(e.target.value);
-  };
-  const submitHandler = (e) => {
-    e.preventDefault();
-    router.push(`/search?query=${query}`);
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  const darkModeChangeHandler = () => {
-    dispatch({ type: darkMode ? "DARK_MODE_OFF" : "DARK_MODE_ON" });
-    const newDarkMode = !darkMode;
-    Cookies.set("darkMode", newDarkMode ? "ON" : "OFF");
-  };
-  const [anchorEl, setAnchorEl] = useState(null);
-  const loginClickHandler = (e) => {
-    setAnchorEl(e.currentTarget);
-  };
-  const loginMenuCloseHandler = (e, redirect) => {
-    setAnchorEl(null);
-    if (redirect) {
-      router.push(redirect);
-    }
-  };
-  const logoutClickHandler = () => {
-    setAnchorEl(null);
-    dispatch({ type: "USER_LOGOUT" });
-    Cookies.remove("userInfo");
-    Cookies.remove("cartItems");
-    Cookies.remove("shippingAddress");
-    Cookies.remove("paymentMethod");
-    router.push("/");
-  };
   return (
     <div>
       <Head>
@@ -142,7 +84,7 @@ export default function Layout({ title, description, favicon, children }) {
 
         <Container className={classes.main}>{children}</Container>
         <footer className=" bottom-0 text-center text-black font-italic  font-semibold">
-          <Typography>Made With ❤ For Kenlink Pharmacies</Typography>
+          <Typography>Powered By ZWGODIGITAL</Typography>
         </footer>
       </ThemeProvider>
     </div>

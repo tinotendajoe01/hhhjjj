@@ -10,7 +10,6 @@ const prescriptionSchema = new mongoose.Schema(
       drugDuration: { type: String, required: true },
       dailyFreq: { type: String, required: true },
       startDate: { type: String, required: true },
-      reminders: [reminderSchema],
     },
     patientDetails: {
       fullName: { type: String, required: true },

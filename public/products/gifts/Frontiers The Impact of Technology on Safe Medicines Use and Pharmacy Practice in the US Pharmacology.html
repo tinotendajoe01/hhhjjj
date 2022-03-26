@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=fCzlsmYQFAUQ_UXneGJNag&gtm_preview=env-2&gtm_cookies_win=x';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TZGWTGG');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=NsJH3Ts1-89I8lZURwQYmw&gtm_preview=env-1&gtm_cookies_win=x';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFKV632');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"598a124f17","applicationID":"3007887","transactionName":"MQcDMkECCkNSW0YMWghNLDBwTCVCR1FRCVAlDQ8SQQwIXFZKHSNACg41A0sXJkl3d3s=","queueTime":0,"applicationTime":518,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VgUHUl5WGwAAVFZaDwY=",licenseKey:"598a124f17",applicationID:"3007887"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(28),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(29),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(29),a=t(28);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(25),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(28),s=t(29),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(30);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],24:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(27),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],25:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],26:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],27:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],28:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],29:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],30:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(28),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(22),s=t("handle"),c=t(28),f=t("ee"),u=t(26),d=t(23),l=t(17),p=t(19),h=l.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},S=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:S,userAgent:u,disabled:b};if(!b){t(16),t(24),v[w]?(v[w]("DOMContentLoaded",o,p(!1)),m[w]("load",r,p(!1))):(v[g]("onreadystatechange",i),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(29),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Frontiers | The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US | Pharmacology</title>
+
+    <link rel="shortcut icon" href="https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/favicon_16x16.ico" type="image/x-icon" />
+
+    <meta property="og:type" content="article" />
+    <meta property="frontiers:type" content="Article" />
+    <meta property="og:site_name" name="site_name" content="Frontiers" />
+    <meta property="og:title" name="Title" content="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" />
+    <meta property="og:description" name="Description" content="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." />
+    <meta property="og:url" name="url" content="https://www.frontiersin.org/article/10.3389/fphar.2018.01361/full" />
+
+        <link href="https://static.frontiersin.org/navigation-plugins/footer/css" rel="stylesheet" />
+            <link href="https://static.frontiersin.org/navigation-plugins/header/css" rel="stylesheet" />
+
+        <meta property="og:image" content="https://www.frontiersin.org/files/MyHome%20Article%20Library/410398/410398_Thumb_400.jpg" />
+            <meta name="citation_volume" content="0" />
+        <meta name="citation_journal_title" content="Frontiers in Pharmacology" />
+        <meta name="citation_publisher" content="Frontiers" />
+        <meta name="citation_journal_abbrev" content="Front. Pharmacol." />
+        <meta name="citation_issn" content="1663-9812" />
+        <meta name="citation_doi" content="10.3389/fphar.2018.01361" />
+        <meta name="citation_pages" content="1361" />
+        <meta name="citation_language" content="English" />
+        <meta name="citation_title" content="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" />
+        <meta name="citation_keywords" content="Patient Safety; medicines-use; Clinical Pharmacy; hospital pharmacy; Medication Errors" />
+        <meta name="citation_abstract" content="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." />
+        <meta name="description" content="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." />
+        <meta name="citation_online_date" content="0001/01/01" />
+        <meta name="citation_date" content="2018" />
+        <meta name="citation_author" content="Schneider, Philip J." />
+        <meta name="citation_author_institution" content="MediHealthInsight, United States" />
+        <meta name="citation_author_institution" content="Division of Pharmacy Practice and Science, College of Pharmacy, The Ohio State University, United States" />
+    <meta name="Keywords" content="Patient Safety, medicines-use, Clinical Pharmacy, hospital pharmacy, Medication Errors" />
+
+        <meta name="dc.identifier" content="doi:10.3389/fphar.2018.01361">
+        <!--CrossMark widget-->
+    
+    <script type="text/javascript">
+
+        var CurrentIBarMenu = 'bysubjects';
+        var CurrentPageCode = 'ARTICLE_PAGE_NEW';
+
+        var FRConfiguration = (function() {
+            return {
+                Environment: 'Live',
+                SANVirtualPath: 'https://www.frontiersin.org/files/',
+                SharepointWebsiteUrl: 'https://www.frontiersin.org',
+                FrontiersJournalUIUrl: 'https://www.frontiersin.org',
+                FrontiersJournalAPIUrl: 'https://api-journal.frontiersin.org',
+                FrontiersReviewUIUrl: '',
+                FrontiersReviewAPIUrl: '',
+                FrontiersCookie: 'frontiersN',
+                FrontiersCookieRememberMe: 'frontiersNt',
+                FrontiersLoginUrl: 'https://www.frontiersin.org/Login.aspx',
+                FrontiersRegistrationUrl: 'http://www.frontiersin.org/Registration/Register.aspx',
+                IsCommentVisible: 'True',
+                IsPreview:'False'
+            };
+        })();
+
+        var FRLanguage = (function() {
+            var languageSet = {"ART_FRONTIERS":"Frontiers ","Article_AcceptedDate":"Accepted: ","Article_AnalyticsToolTip":"The total view count is updated once a day, so not to worry if you don\u0027t see immediate results.","Article_AnalyticsTotalViews":"total views","Article_AnalyticsViewImpact":"View Article Impact","Article_ArchiveLinkText":"Articles","Article_BibTex":"BibTex","Article_Citation":"Citation: ","Article_Commentary":"COMMENTARY","Article_Copyright":"Copyright: ","Article_CopyrightText":"This is an open-access article distributed under the terms of the \u003ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003eCreative Commons Attribution License (CC BY)\u003c/a\u003e. The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.","Article_Correspondence":"* Correspondence: ","Article_DownloadArticle":"Download Article","Article_DownloadPDF":"Download PDF","Article_DownloadProvisionalArticle":"Download Provisional Article","Article_DownloadProvisionalPDF":"Download Provisional PDF","Article_EditedBy":"Edited by: ","Article_EndNote":"EndNote","Article_EPUB":"EPUB","Article_ExportCitation":"Export Citation","Article_JATS":"JATS","Article_Keywords":"Keywords: ","Article_NLM":"XML (NLM)","Article_OriginalArticle":"ORIGINAL ARTICLE","Article_PaperPendingPublishedDate":"Paper pending published: ","Article_PDF":"PDF","Article_ProvisionalPDF":"Provisional PDF","Article_PublishedDate":"Published online: ","Article_ReadFullText":"Read Full Text","Article_ReceivedDate":"Received: ","Article_ReferenceManager":"Reference Manager","Article_ReviewedBy":"Reviewed by: ","Article_RTInfoText":"This article is part of the Research Topic","Article_ShareOn":"SHARE ON","Article_SimpleTEXTfile":"Simple TEXT file","Article_SupplementalData":"SUPPLEMENTAL DATA","Article_TableOfContent":"TABLE OF CONTENTS","Article_ViewEnhancedPDF":"ReadCube","Article_XML":"XML","BrowserWarningText":"\u003ch2\u003eWarning!\u003c/h2\u003e\u003cp\u003eYou are using an \u003cstrong\u003eoutdated\u003c/strong\u003e browser. This page doesn\u0027t support Internet Explorer 6, 7 and 8.\u003cbr /\u003ePlease \u003ca class=\"blue\" href=\"http://browsehappy.com/\"\u003eupgrade your browser\u003c/a\u003e or \u003ca class=\"blue\" href=\"http://www.google.com/chromeframe/?redirect=true\"\u003eactivate Google Chrome Frame\u003c/a\u003e to improve your experience.\u003c/p\u003e","COMMENT_HEADERTEXT":"Comment text too long","COMMENT_WARNINGTEXT":"Comments must be less than 4,000 characters. You have entered ","Impact_BackToArticle":"Back to article","People_Also_LookedAt":"People also looked at"};
+
+            return {
+                value: function(key) {
+                    if (languageSet[key]) {
+                        return languageSet[key];
+                    } else {
+                        throw new Error('Unable to get the value status from the language set'); // Use Error, not FRError
+                    }
+                }
+            };
+
+        })();
+
+        var FRJournalDetails = (function() {
+            return {
+                JournalType: 'section',
+                JournalId: '176',
+                SectionId: '202'
+            };
+        })();
+
+        var FRArticleDetails = (function() {
+            return {
+                ArticleId: '410398',
+                DisclaimerText: 'All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article or claim that may be made by its manufacturer is not guaranteed or endorsed by the publisher.'
+            };
+        })();
+        var FRArticleRecaptchaSettings = (function() {
+            return {
+                RecaptchaSiteKey: '6LdG3i0UAAAAAOC4qUh35ubHgJotEHp_STXHgr_v'
+            };
+        })();
+
+    </script>
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-535f7e222fc3ca72"></script>
+
+
+    <script language="javascript">
+        var addthis_config = addthis_config || {};
+        addthis_config.data_track_addressbar = false;
+        addthis_config.data_track_clickback = false;
+    </script>
+
+    
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script src="/areas/research-topics/content/scripts/frontiers/frontiers.markerclusterer.js"></script>
+
+
+    <link href="https://209cd62b0febf2a55d40-715eb384bc6027b876e93ad33d5c5ec3.ssl.cf3.rackcdn.com/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet"/>
+
+    <link href="https://9d0dd7a648345f19af83-877d2ecaf11b88d5e17327c758e17ef6.ssl.cf2.rackcdn.com/museo-sans-1.0.1/css/museo-sans.css" rel="stylesheet"/>
+
+    <link href="https://9d0dd7a648345f19af83-877d2ecaf11b88d5e17327c758e17ef6.ssl.cf2.rackcdn.com/museo-slab-1.0.1/css/museo-slab.css" rel="stylesheet"/>
+
+    <link href="https://209cd62b0febf2a55d40-715eb384bc6027b876e93ad33d5c5ec3.ssl.cf3.rackcdn.com/open-sans-1.0.0/css/open-sans.css" rel="stylesheet"/>
+
+    <link href="https://static.frontiersin.org/areas/articles/css/app?v=z2KlYjeIvs8HG5sef62U9BFsY9DW9PNwT4EjQYYxNts1" rel="stylesheet"/>
+
+    
+    <style type="text/css"> .journal-pharmacology {
+ background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 37%;
+}
+/* Displays/Screens (e.g. 19" WS @ 1440x900) --------------- */ @media only screen and (max-width: 1649px) {
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 40%;
+ }}
+
+/* Displays/Screens (e.g. MacBook @ 1280x800) -------------- */
+@media only screen and (max-width: 1409px) {
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 40%;
+ }}
+/* Large Devices, Wide Screens --------- */  @media only screen and (max-width : 1250px) {
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 40%;
+ }}
+
+/* Medium Devices, Desktops ---------- */  @media only screen and (max-width : 992px) { 
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 50%;
+ }}
+/* Small Devices, Tablets ------------ */  @media only screen and (max-width : 768px) {
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 45%;
+ }}
+
+/* Extra Small Devices, Phones-----------  */  @media only screen and (max-width : 480px) {
+ .journal-pharmacology {
+  background: #fff url('https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/journal-pharmacology.png') no-repeat 100% 0px;
+ background-size: 65%;
+ }} </style>
+    
+</head>
+<body class="journal-pharmacology section-drugs-outcomes-research-and-policies">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZGWTGG&gtm_auth=fCzlsmYQFAUQ_UXneGJNag&gtm_preview=env-2&gtm_cookies_win=x"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFKV632&gtm_auth=NsJH3Ts1-89I8lZURwQYmw&gtm_preview=env-1&gtm_cookies_win=x"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        <div data-navigation-plugin="header"></div>
+        <script src="https://static.frontiersin.org/navigation-plugins/header/js"></script>
+
+    <script src="https://static.frontiersin.org/areas/articles/js/vendors?v=tAxu0Vh-V8obhOjk3AWjuKCUwIhnxLeDL_2ztAnsUfA1"></script>
+
+
+    
+
+    <!--[if lte IE 8]>
+        <div class="row">
+            <div class="col-md-16">
+                <div style="margin-bottom: 15px;"><h2>Warning!</h2><p>You are using an <strong>outdated</strong> browser. This page doesn't support Internet Explorer 6, 7 and 8.<br />Please <a class="blue" href="http://browsehappy.com/">upgrade your browser</a> or <a class="blue" href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p></div>
+            </div>
+        </div>
+    <![endif]-->
+
+    <div class="page-container">
+        
+
+<header>
+
+            <a href="https://www.frontiersin.org/about/impact?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=impact-2021-jour-hp-top" target="_blank">
+            <div class="marketing journal-marketing-message no-impact">
+                <span class="message">
+                    <p><strong>Impact Factor 5.810</strong>&nbsp;|<strong> CiteScore 6.2<br /></strong>More on impact &rsaquo;</p>
+                </span>
+
+            </div>
+        </a>
+<div id="journal-header" class="journal-home" style="position: relative;">
+    <div class="container-fluid main-container-xxl">
+        <table id="logo-table" style="width:100%">
+            <tr>
+                    <td width="50%" valign="bottom" align="right" class="left-cell">
+                        <h1>
+                            <a href="https://www.frontiersin.org/journals/176" data-test-id="journal-link">
+                                <span>Frontiers </span>in Pharmacology
+                            </a>
+                        </h1>
+                    </td>
+                        <td class="right-cell" width="50%" style="vertical-align: bottom">
+                            <h2>
+                                <a href="https://www.frontiersin.org/journals/176/sections/202" data-test-id="section-link" class="btn btn-link">
+                                    Drugs Outcomes Research and Policies
+
+
+                                </a>
+                            </h2>
+                        </td>
+            </tr>
+        </table>
+
+
+        
+     </div>
+</div>
+
+
+    <div id="journal-nav">
+    <div class="container-fluid main-container-xxl">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-wrapper">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#journal-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="pull-left">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </span>
+                            <span class="pull-right hidden-xs">Section</span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse no-transition journal-nav-bar" id="journal-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="tab-overview icon icon-left">
+                                    <a id="journal_nav_home" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#"><span class="sr-only">(current)</span><i class="fa fa-home"></i>Section</a>
+                                </li>
+                                <li class="tab-about">
+                                    <a id="journal_nav_about" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#about">About</a>
+                                </li>
+                                <li class="tab-archive active">
+                                    <a id="journal_nav_articles" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#articles">Articles</a>
+                                </li>
+                                <li class="tab-research-topics">
+                                    <a id="journal_nav_research_topics" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#research-topics">Research topics</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a id="journal_nav_for_authors" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">For authors <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a id="for_authors_why_submit" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#why-submit">Why submit?</a></li>
+                                        <li><a id="for_authors_fees" href="https://www.frontiersin.org/about/publishing-fees" target="_blank">Fees</a></li>
+                                        <li><a id="for_authors_article_types" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#article-types">Article types</a></li>
+                                        <li><a id="for_authors_authors_guidelines" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#author-guidelines">Author guidelines</a></li>
+                                        <li><a id="for_authors_review_guidelines" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#review-guidelines">Review guidelines</a></li>
+                                        <li><a id="for_authors_submission_checklist" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#submission-checklist">Submission checklist</a></li>
+                                        <li><a id="for_authors_contact_editorial_office" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#contact-editorial-office">Contact editorial office</a></li>
+                                            <li><a id="for_authors_submit_manuscript" href="https://www.frontiersin.org/submission/submissioninfo.aspx" class="action-link">Submit your manuscript</a></li>
+                                    </ul>
+                                </li>
+                                <li class="tab-editorial-board">
+                                    <a id="journal_nav_Editorial_Board" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies#editorial-board">Editorial board</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                        <ul class="list-inline follow-us nav navbar-nav">
+                            <li class="twitter icon button">
+                                <a data-test-id="twitter-link" href="https://twitter.com/@FrontPharmacol">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="rss icon button">
+                                <a data-test-id="rss-link" href="https://www.frontiersin.org/journals/pharmacology/sections/drugs-outcomes-research-and-policies/rss">
+                                    <i class="fa fa-rss"></i>
+                                </a>
+                            </li>
+                            <li class="alerts icon button">
+                                <a data-test-id="alert-link" href="http://connect.frontiersin.org/subscriptions/subscribe?item=1&amp;field=62">
+                                    <i class="fa fa-bell" style="width: auto; padding-right: 7px; padding-left: 7px;"><span class="article-alert-text" style="font-family: MuseoSans, 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-left: 6px; font-weight: 700; letter-spacing: 0px; font-size: 13px;">Article alerts</span></i>
+                                </a>
+                            </li>
+                                    
+                            
+                        </ul>
+
+                    </nav>
+                </div><!-- / .nav-wrapper -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+
+<div class="journal-actions article-actions">
+    <div class="container-fluid main-container-xxl">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-lg-push-6 col-md-push-6 col-research-topic">
+                    <div class="research-topic-container">
+                        <a href="https://www.frontiersin.org/research-topics/7330#articles" data-test-id="relatedRT-link">
+                            <div class="research-topic-data">
+                                <h5 class="topic-title">
+                                    <span>This article is part of</span> the Research Topic
+                                </h5>
+                                <p style="margin-bottom:0;">
+                                   
+                                        Pharmacy Technology and Practice
+                                        <span style="color:red;" class="topic-link-trim">
+                                            View all
+<span>
+                                                    9
+                                                </span>
+                                            Articles <span style="position: relative;top: 1px;" class="fa fa-angle-right"></span>
+                                        </span>
+
+                                   
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            <section class="col-lg-4 col-lg-offset-2 col-md-6 col-md-offset-0 col-lg-pull-6 col-md-pull-6">
+                <a href="https://www.frontiersin.org/journals/176/sections/202#articles" class="archive-link hidden-sm hidden-xs" data-test-id="archive-link">
+                    <i class="fa fa-angle-left"></i> Articles
+                </a>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<aside id="anchors" class="pull-left table-of-contents side-article">
+    <div class="side-people hidden-sm hidden-xs">
+                <section class="side-article-editors">
+                    <header><h5 class="like-h4">Edited by</h5></header>
+                    <a class="authors" href="https://loop.frontiersin.org/people/510287/overview">
+                        <img alt=" " class="pr5 pull-left" src="https://loop.frontiersin.org/images/profile/510287/24"></img>
+                        <h6 class="author-link-aside">Darrin L. Baines</h6>
+                    </a>
+                    <div class="clearfix"></div>
+                    <p><span class="notes">Bournemouth University, United Kingdom</span></p>
+                </section>
+                <section class="side-article-editors">
+                    <header><h5 class="like-h4"> Reviewed by</h5></header>
+                            <a class="authors" href="https://loop.frontiersin.org/people/30918/overview">
+                                <img alt=" " class="pr5 pull-left" src="https://loop.frontiersin.org/images/profile/30918/24"></img>
+                                <h6 class="author-link-aside">Sunita Nair</h6>
+                            </a>
+                            <div class="clearfix"></div>
+                        <p><span class="notes">Consultant, India</span></p>
+                            <a class="authors" href="https://loop.frontiersin.org/people/118627/overview">
+                                <img alt=" " class="pr5 pull-left" src="https://loop.frontiersin.org/images/profile/118627/24"></img>
+                                <h6 class="author-link-aside">Fathi M. Sherif</h6>
+                            </a>
+                            <div class="clearfix"></div>
+                        <p><span class="notes">University of Tripoli, Libya</span></p>
+                    <p class="disclaimer">The editor and reviewers' affiliations are the latest provided on their Loop research profiles and may not reflect their situation at the time of review.</p>
+                </section>
+    </div>
+    <nav>
+            <header><h5 class="like-h4" style="padding-top: 14px; padding-left: 6px; margin-bottom: 6px;">TABLE OF CONTENTS</h5></header>
+            <ul class="nav nav-list list-unstyled contents">
+                <li>
+<ul class="flyoutJournal">
+<li><a href="#h1">Abstract</a></li>
+<li><a href="#h2">Introduction</a></li>
+<li><a href="#h3">What We Know About Medicines Use</a></li>
+<li><a href="#h4">The Epidemiology of Problems With Medicines Use</a></li>
+<li><a href="#h5">Safe Practices for Medicines Use</a></li>
+<li><a href="#h6">Technology Enabled Changes</a></li>
+<li><a href="#h7">How Has This Transformed Pharmacy Practice in Hospitals?</a></li>
+<li><a href="#h8">Summary</a></li>
+<li><a href="#h9">Author Contributions</a></li>
+<li><a href="#h10">Conflict of Interest Statement</a></li>
+<li><a href="#h11">References</a></li>
+</ul>                </li>
+            </ul>
+    </nav>
+</aside>
+
+
+<div id="article" class="boxed white no-padding">
+    <div class="container-fluid main-container-xxl">
+            <div class="side-article-mrk hidden-md hidden-lg top clearfix">
+                <p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><img src="https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/article-marketing-message-79982763-254d-4bb6-96b8-126758de1166.png" alt="" /><br /></a></p>
+<p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><strong>Suggest a Research Topic &gt;</strong></a></p>
+            </div>
+        <div class="row">
+
+            
+<style>
+    .disabled-supplementary-btn {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .65;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+</style>
+
+<aside class="a col-xs-12 col-sm-12 col-lg-2 col-md-3 pull-right side-article right-container">
+        <button type="button" class="navbar-toggle navbar-download collapsed" data-toggle="collapse" data-target=".show" aria-expanded="false">
+            <span class="icon"><i class="fa fa-download"></i></span>
+        </button>
+    <button type="button" class="navbar-toggle navbar-share collapsed" data-toggle="collapse" data-target=".show" aria-expanded="false">
+        <span class="icon"><i class="fa fa-share-alt"></i></span>
+    </button>
+        <div class="side-article-download show collapse clearfix">
+            <ul class="list-unstyled list-inline clearfix">
+                    <li class="dropdown text-center paper">
+                        <a data-target="#" class="dropdown-toggle" data-test-id="download-button" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="icon icon-article"><i class="fa fa-file-pdf-o"></i></span>
+                            <span class="icon-label">Download Article</span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a class="download-files-pdf action-link" href="/articles/10.3389/fphar.2018.01361/pdf" data-test-id="article-downloadpdf">
+                                        Download PDF
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="download-files-readcube" href="http://www.readcube.com/articles/10.3389/fphar.2018.01361" data-test-id="article-viewenhancedpdf">
+                                        ReadCube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="download-files-epub" href="/articles/10.3389/fphar.2018.01361/epub" data-test-id="article-epub">
+                                        EPUB
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="download-files-nlm" href="/articles/10.3389/fphar.2018.01361/xml/nlm" data-test-id="article-nlm">
+                                        XML (NLM)
+                                    </a>
+                                </li>
+                                                            <li class="disabled-supplementary-btn">
+
+                                    <a data-test-id="supplementary-button"
+                                       id="supplementary_view">
+
+                                        Supplementary
+                                        <br>
+                                        Material
+                                    </a>
+
+
+                                </li>
+                        </ul>
+                    </li>
+                <li class="dropdown text-center citation">
+                    <a data-target="#" class="dropdown-toggle" data-test-id="citation-button" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="icon icon-citation"><i class="fa fa-quote-left"></i></span>
+                        <span class="icon-label">Export citation</span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a data-test-id="article-endnote" href="https://www.frontiersin.org/articles/10.3389/fphar.2018.01361/endNote">
+                                    EndNote
+                                </a>
+                            </li>
+                            <li>
+                                <a data-test-id="article-referencemanager" href="https://www.frontiersin.org/articles/10.3389/fphar.2018.01361/reference">
+                                    Reference Manager
+                                </a>
+                            </li>
+                            <li>
+                                <a data-test-id="article-simpletextfile" href="https://www.frontiersin.org/articles/10.3389/fphar.2018.01361/text">
+                                    Simple TEXT file
+                                </a>
+                            </li>
+                            <li>
+                                <a data-test-id="article-bibtex" href="https://www.frontiersin.org/articles/10.3389/fphar.2018.01361/bibTex">
+                                    BibTex
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+            <div class="side-article-impact">
+            <ul class="nav">
+                <li class="impact-data" title="The total view count is updated once a day, so not to worry if you don&#39;t see immediate results.">
+                    <span class="title-number"></span>
+                    <span class="title-text">total views</span>
+                </li>
+                <li class="hidden-sm hidden-xs">
+                    <div class="altmetric-icon">
+                        <div class='altmetric-embed' data-badge-type='1' data-doi='10.3389/fphar.2018.01361' data-link-target="new"></div>
+                    </div>
+                </li>
+            </ul>
+                <a type="button" class="btn btn-default hidden-sm hidden-xs btn-impact " data-test-id="view-article-impact" href="http://loop-impact.frontiersin.org/impact/article/410398#views" target="_blank">
+                    <span class="icon-impact"><i class="fa fa-line-chart"></i></span> View Article Impact
+                </a>
+        </div>
+                        <div class="side-article-mrk hidden-sm hidden-xs clearfix">
+                <p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><img src="https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/article-marketing-message-79982763-254d-4bb6-96b8-126758de1166.png" alt="" /><br /></a></p>
+<p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><strong>Suggest a Research Topic &gt;</strong></a></p>
+            </div>
+        <div class="side-article-share show collapse">
+            <h5 class="like-h4">SHARE ON</h5>
+            <ul class="share-media clearfix" style="padding: 0;">
+                <li class="social_block">
+                    <div class="atButton">
+                        <a class="addthis_button_facebook at300b" addthis:title="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" addthis:description="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." addthis:url="https://www.frontiersin.org/article/10.3389/fphar.2018.01361" title="Facebook"></a>
+                    </div>
+                    <a><span class="facebook_count"></span></a>
+                </li>
+                <li class="social_block">
+                    <div class="atButton">
+                        <a class="addthis_button_twitter at300b" addthis:title="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" addthis:description="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." addthis:url="https://www.frontiersin.org/article/10.3389/fphar.2018.01361" title="Tweet"></a>
+                    </div>
+                    <a><span class="twitter_count"></span></a>
+                </li>
+                <li class="social_block">
+                    <div class="atButton">
+                        <a class="addthis_button_linkedin at300b" addthis:title="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" addthis:description="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." addthis:url="https://www.frontiersin.org/article/10.3389/fphar.2018.01361" title="LinkedIn"></a>
+                    </div>
+                    <a><span class="linkedin_count"></span></a>
+                </li>
+                <li class="social_block">
+                    <div class="atButton">
+                        <a class="addthis_button_more at300b" addthis:title="The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US" addthis:description="For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles." addthis:url="https://www.frontiersin.org/article/10.3389/fphar.2018.01361" title="View more services"></a>
+                    </div>
+                    <a><span class="total_count"></span></a>
+                </li>
+            </ul>
+        </div>
+
+        <a type="button"
+           class="open-supplemental-data btn btn-default hidden-sm hidden-xs  disabled-supplementary-btn"
+           id="supplementary_view">
+            <span class="supplemental-label">
+                <i class="supplemental-icon"></i>
+                <label>Open Supplemental Data</label>
+            </span>
+        </a>
+        <input data-val="true"
+               id="hdnSupplementary_view"
+               name="Supplementary"
+               type="hidden"
+               value="false" />
+    </aside>
+
+
+            
+<main class="b col-xs-12 col-sm-12 col-lg-8 col-lg-push-2 col-md-7 col-md-push-2 pull-left">
+    <div class="article-section">
+        <div class="article-container" data-html="True">
+            <div class="abstract-container">
+                
+                <div class="article-header-container">
+                    <!-- Start CrossMark Snippet v2.0 -->
+                        <!-- the external CrossMark script to load the crossmark logo responsive  JPB-5562 -->
+                        <script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+                        <a data-target="crossmark" class="crossmark pull-right" style="padding: 3px 0 13px 0;"><img id="crossmark-icon" style="border: 0; width:64px; height:64px;" src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_square.svg" /></a>
+                        <div id="crossmark-dialog" style="display: none;" title="">
+                            <!-- the external CrossMark data is loaded inside this iframe -->
+                            <iframe id="crossmark-dialog-frame" frameborder="0"></iframe>
+                        </div>
+                    <!-- End CrossMark Snippet -->
+
+                    <div class="header-bar-one">
+                        <h2>
+                            MINI REVIEW article
+                        </h2>
+                    </div>
+                    <div class="header-bar-three">
+                        Front. Pharmacol., 20 November 2018
+                             | <a href="https://doi.org/10.3389/fphar.2018.01361">https://doi.org/10.3389/fphar.2018.01361</a>
+                    </div>
+                </div>
+                
+<div class="JournalAbstract">
+<a id="h1" name="h1"></a><h1>The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US</h1>
+<div class="authors">
+<a href="https://www.frontiersin.org/people/u/528395" class="user-id-528395"><img class="pr5" src="https://loop.frontiersin.org/images/profile/528395/24" onerror="this.src='https://f96a1a95aaa960e01625-a34624e694c43cdf8b40aa048a644ca4.ssl.cf2.rackcdn.com/Design/Images/newprofile_default_profileimage_new.jpg'" alt=""/>Philip J. Schneider</a><sup>1,2*</sup></div>
+<ul class="notes">
+<li><span><sup>1</sup></span>MediHealthInsight, Scottsdale, AZ, United States</li>
+<li><span><sup>2</sup></span>Division of Pharmacy Practice and Science, College of Pharmacy, The Ohio State University, Columbus, OH, United States</li>
+</ul>
+<p class="mb0">For decades it has been suggested that pharmacists are under-utilized and could better use their knowledge and experience to improve the use of medicines. The traditional roles for pharmacists have been preparing and distributing medicines, but this has limited both the location where they work and the available time to work more closely with other healthcare professionals to improve both the effectiveness and safety of medicines. Newly emerging technologies have made this possible. Examples include robotics that automate preparation and distribution of medicines, electronic health information, clinical decision support systems, and machine readable coding on medicine packaged. As a result of the use of these technologies, pharmacists in hospitals are working outside the hospital pharmacy and spending more time in medication therapy management activities compared to traditional distribution roles.</p>
+<div class="clear"></div>
+</div>
+<div class="JournalFullText">
+<a id="h2" name="h2"></a><h2>Introduction</h2>
+<p class="mb0">The adoption of innovative ideas can be painfully slow, even when an innovation has well-demonstrated positive impact. In his work Diffusion of Innovation, Rogers concluded that based on a study of the adoption of new ideas, it takes decades for an innovation to be widely accepted (<a href="#B31">Rogers, 2003</a>). One would like to think that when the public clearly benefits from a technology that the adoption rate would be quicker. In health care, where innovations have the potential to improve the effectiveness, safety, and efficiency of care, the imperative for change would seem to be clear. As we will see, this is not always the case.</p>
+<a id="h3" name="h3"></a><h2>What We Know About Medicines Use</h2>
+<p class="mb15">The American Society of Health-System Pharmacy (ASHP) is an organization representing pharmacists practicing in hospitals and organized health care settings. For more than 50 years, ASHP has surveyed hospital pharmacy directors in US hospitals beginning with the landmark publication Mirror to Hospital Pharmacy in 1965 (<a href="#B8">Francke et al., 1964</a>). This report assessed the practice of pharmacy in US hospitals. This audit revealed a scope of service that was limited to drug preparation and distribution. The authors challenged the profession to aspire to a more professional role by strengthening the relationship between physicians and pharmacists to improve the use of medicines.</p>
+<p class="mb15">Since then, more than 20 such surveys have been conduced. Since 1998, this survey has been conduced annually and the results provide the opportunity to identify, track, and trend changes in medicines use practices and the role of pharmacists in hospitals (<a href="#B29">Ringold et al., 1999</a>, <a href="#B30">2000</a>; <a href="#B13">Pedersen et al., 2001</a>, <a href="#B14">2003</a>, <a href="#B15">2004</a>, <a href="#B16">2005</a>, <a href="#B17">2006</a>, <a href="#B18">2007</a>, <a href="#B19">2008</a>, <a href="#B20">2009</a>, <a href="#B21">2010</a>, <a href="#B22">2011</a>, <a href="#B23">2012</a>, <a href="#B24">2013</a>, <a href="#B25">2014</a>, <a href="#B26">2015</a>, <a href="#B27">2016</a>, <a href="#B28">2017</a>; <a href="#B32">Schneider et al., 2018</a>). Through these surveys, progress toward the vision described in Mirror to Hospital Pharmacy has been largely realized, albeit in a time frame that supports Rogers&#x2019; theory of the diffusion of innovations. Much of this progress has been through the use of technology.</p>
+<p class="mb0">At the inception, these surveys were intended to determine what pharmacists were doing in hospitals and to assess the scope of pharmacy services in the US. In 1998, the surveys were reformatted to focus on the steps in the system of medicines-use, not just pharmacy practice. It acknowledged that this system includes many participants, not just pharmacists. At the time, a widely published report from the Institute of Medicine titled To Err is Human called attention to harm resulting from care intended to help patients (<a href="#B9">Institute of Medicine, 2000</a>). This report focused on problems with the system of care as being more significant than the performance of individual health care professionals. That was the rationale for changing the format of the survey.</p>
+<a id="h4" name="h4"></a><h2>The Epidemiology of Problems With Medicines Use</h2>
+<p class="mb15">The medicines use system is at least multidisciplinary but ideally an interdisciplinary system. While the roles of health care professionals overlap and can vary, typically a physician prescribes a medicine, a pharmacist prepares and dispenses the dose, and the nurse, patient or family member administers the drug. The performance of each member of this team can affect the effectiveness, safety, and efficiency of a medicine and its use, but so can the interaction of these participants in the system, each of whom functions at different places and times in the process. Problems with handoffs and communication often contribute to errors, adverse events and a loss of efficiency. It would seem obvious that technology could improve the performance of the system if medicines use to the benefit of patients, health care professionals, and the institution in which the patients are cared.</p>
+<p class="mb0">Problems with the performance of the medicines use system have been studied. A seminal study that called attention to problems with the use of medicines was the Harvard Medical Practice study. The results of a review of more than 30,000 patient records found that 3.7% of hospitalized patients were injured from the care that they received (<a href="#B7">Brennan et al., 1991</a>). The most common injury was &#x201C;drug complications,&#x201D; which accounted for 19% of all events detected (<a href="#B10">Leape et al., 1991</a>)In a follow up study of medication errors in hospitalized patients, it was found that mistakes resulting in harm to patient occurred by all participants in the medicines use system and at all steps in the system. The most common step where errors occurred was when medicines were prescribed. Fully19% of the mistakes that resulted in harm to patients were detected at this step. The next most common step was when a nurse administered a medicine to a patient, where 17% of the errors occurred. Less common steps where errors occurred was during the transcribing of orders for medicines and when doses were prepared (<a href="#B6">Bates et al., 1995</a>). These investigators looked further to determine what &#x201C;system failures&#x201D; contributed to the medication errors. The two most common underlying causes were a lack of information about the patient (e.g., unknown allergy to a drug) and a lack of information about the drug (e.g., an need to adjust the dose in certain patients) (<a href="#B12">Lucian et al., 1995</a>). It is easy to see how technology can be used to address these system problems.</p>
+<a id="h5" name="h5"></a><h2>Safe Practices for Medicines Use</h2>
+<p class="mb15">Well-before the Harvard Medical Practice study, problems with drug administration errors in by nurses to hospitalized patients were documented. Studies showed error rates of up to 10% occurred when comparing what was prescribed to what was actually administered to the patient (<a href="#B5">Barker, 1969</a>). The &#x201C;system&#x201D; of medicines use in place at the time this study was conducted was one where all drugs were stocked in bulk containers on nursing units in the hospital. A &#x201C;medication nurse&#x201D; would prepare a medication tray by taking individual doses from the bulk supply, placing them in individual containers for each patient on the unit, and going from room to room to administer the doses at the scheduled time. With this method, the nurse performed both a dispensing and drug administration role and was expected to administer what the physician ordered with out questioning it. A new system that included more double checks and safeguards called the &#x201C;unit dose&#x201D; system was shown to reduce medication errors by as much as 50%. This system transferred responsibility for dispending medicines from the nurse to the pharmacist, providing an additional double check by the pharmacist in the process. It also provided a limited supply (24 h or less) of individually packaged and labeled medicines in a patient-specific container for the nurse to use when administering medicines (<a href="#B5">Barker, 1969</a>). This made it less likely that the wrong dose or wrong drug would be administered or the medicine administered to the wrong patient or at the wrong time.</p>
+<p class="mb0">While evidence supporting the safety of unit dose drug distribution system was published in 1968, the adoption of this innovation followed the timeline suggested by Rogers in Diffusion of Innovation. For example, in 1975, unit dose drug distribution systems were in place in only 18% of US hospitals. It took until 1995; 20 years for this system to be adopted in 92% of hospitals &#x2013; consistent with the timeline of Rogers (<a href="#B32">Schneider et al., 2018</a>) (Figures <a href="#F1">1</a>, <a href="#F2">2</a>).</p>
+<div class="DottedLine"></div>
+<div class="Imageheaders">FIGURE 1</div>
+<div class="FigureDesc">
+<a href="https://www.frontiersin.org/files/Articles/410398/fphar-09-01361-HTML/image_m/fphar-09-01361-g001.jpg" name="figure1" target="_blank">
+<img src="https://www.frontiersin.org/files/Articles/410398/fphar-09-01361-HTML/image_t/fphar-09-01361-g001.gif" id="F1" alt="www.frontiersin.org" /></a>
+<p><strong>FIGURE 1.</strong> Trends in drug dispensing.</p>
+</div>
+<div class="clear"></div>
+<div class="DottedLine mb15"></div>
+<div class="Imageheaders">FIGURE 2</div>
+<div class="FigureDesc">
+<a href="https://www.frontiersin.org/files/Articles/410398/fphar-09-01361-HTML/image_m/fphar-09-01361-g002.jpg" name="figure2" target="_blank">
+<img src="https://www.frontiersin.org/files/Articles/410398/fphar-09-01361-HTML/image_t/fphar-09-01361-g002.gif" id="F2" alt="www.frontiersin.org" /></a>
+<p><strong>FIGURE 2.</strong> Twenty Four-hour review of medication orders by pharmacists.</p>
+</div>
+<div class="clear"></div>
+<div class="DottedLine"></div>
+<a id="h6" name="h6"></a><h2>Technology Enabled Changes</h2>
+<p class="mb15">There are opportunities to harness new technologies to improve the use of medicines and transform pharmacy practice. Baines and colleagues has presented a conceptual framework for analyzing production methods, productivity and technology in pharmacy practice that differentiates between dispensing and pharmaceutical care services. They outline a framework to study the relationship between pharmacy practice and productivity, shaped by educational and technological inputs (<a href="#B3">Baines D. et al., 2018</a>).</p>
+<p class="mb15">While the transfer of responsibility for dispensing of medicines from nursing to pharmacy had a positive impact on patient safety, it did not improve operational efficiency. Preparing patient-specific medication bins for each patient every day (if not many times per day) was much more labor intensive and expensive. It also created a lag between when medications were prescribed and when they were available to the nurse for administration to the patient. Medication orders change during the day, making the unit dose bins from the pharmacy outdated. This became worse as acuity increased and length of stay decreased. Two technology enabled changes resulted: robotic filling of unit dose bins and stocking medications in patient care areas using automated dispensing cabinets.</p>
+<p class="mb15">While robotic enabled centralized unit dose cart filling systems solved the workforce issue and improved accuracy in dispensing, it did not solve the responsiveness to order changes. Moreover, robotic systems were very expensive and their use limited to very large hospitals. What became a more popular option was re-locating medications to the patient care areas using automated dispensing cabinets. To illustrate this, only 7% of US hospitals employed robotic technology in 2002 for centralized unit dose drug distribution systems. This remained steady over time and only 8% had this technology by 2017 (<a href="#B32">Schneider et al., 2018</a>). In contrast, 22% of US hospitals used automated dispensing cabinets in patient care areas for drug dispensing in 2002, but this rose to 70% by 2017. A summary of these trends is shown in Figure <a href="#F1">1</a>. Robotic technology could also used to compounding sterile preparations in the pharmacy. This technology is quite expensive and does not enjoy widespread use in US hospitals. The percentage using this technology has remained steady at less than 3% in the 6 years that this has been surveyed (<a href="#B32">Schneider et al., 2018</a>). Robotic technology is more commonly used to compound more complex nutrition support formulations. These preparations are not only time consuming to compound, but errors are more likely to result in harm to patients. In 2017, 14.3% of hospitals used robotic technology to compound nutrition support formulations (<a href="#B32">Schneider et al., 2018</a>).</p>
+<p class="mb15">Reverting back to a floor stock system, albeit a technology enabled one created the potential to risk an increase in medication errors comparable to the rate documented with the traditional floor stock system. Again &#x2013; technology to the rescue. Two innovations emerged to prevent a return to unacceptable medication error rates. The first was the &#x201C;profiling system&#x201D; where a pharmacist review and approval of the prescribed therapy was necessary before a nurse could access a medicine from an automate dispensing cabinet. The second was &#x201C;lidded pockets&#x201D; where access to any container within the automated dispensing cabinet is restricted so that a nurse does not have free access to all medicines in the automated dispensing cabinet; only the pocket that has the medicine ordered for that patient. The use of lidded pockets has increased from 51.8% in 2008 to 70.1% in 2017 (<a href="#B32">Schneider et al., 2018</a>).</p>
+<p class="mb15">A review of prescription orders by a pharmacist is considered a safe medication practice. Lesar, at all found 3 errors per 1000 prescriptions detected by hospital pharmacists (<a href="#B11">Lesar et al., 1997</a>). A double check by pharmacist is important to detect and prevent errors in prescribing causing an adverse drug event. Unit dose and decentralized automated dispensing cabinet- based systems with profiling offer this double check before a dose is made available for administration to the patient. Historically, this practice required a pharmacist to be physically present in the hospital to review prescriptions and a 24-h pharmacy service, which was expensive and not always possible in smaller hospital. The advent of technologies including the electronic health record and properly configured automated dispensing cabinets has made it possible for a pharmacist to review and approve prescriptions remotely before a nurse can obtain and administer a medicine to a patient. As a result, the percentage of hospitals where a pharmacist does not review prescriptions before a medicine is available for administration to a patient has continued to decline from 60% in 2005 to 11% in 2017 as shown in Figure <a href="#F2">2</a> (<a href="#B32">Schneider et al., 2018</a>).</p>
+<p class="mb15">Computer prescriber order entry systems were thought to reduce the need for pharmacist to review medication orders before doses were available for administration to the patient. These systems employ clinical decision support, which alert prescribers to potential dosing errors, drug allergies and drug interactions. Early investigators considered this a &#x201C;systems solution&#x201D; to address some of the more common underlying causes of prescribing errors; namely lack of information about the patient and the drug prescribed (<a href="#B6">Bates et al., 1995</a>; <a href="#B12">Lucian et al., 1995</a>). Between 2003 and 2016, the percentage of US hospitals with computer prescriber order entry systems with clinical decision support increased from 2.5 to 95.6% (<a href="#B28">Pedersen et al., 2017</a>). While electronic prescribing has become almost universal, problems with alert fatigue and the low positive predictive value of alerts has limited the impact of these systems on error rates and has not eliminated the value of a pharmacist review of medication orders.</p>
+<p class="mb0">Another technology that has been show to improve safety and efficiency is machine-readable bar coding of medication packages. This technology has been used in many industries to more accurately reconcile and verify the identity of objects and would have logical application in verifying the identity of medicines, the persons handling them, and the patient to whom they are administered. This technology has been used in both the pharmacy to improve the safety and efficiency of drug storage, preparation, and dispensing, and by nursing to improve the safety and efficiency of drug administration and documentation in the medication administration record. Barcode scanning is also used to verify ingredients when sterile preparations are compounded in the pharmacy. The percentage of hospitals that are doing this has increased from 11.9% in 2011 to 26.9% in 2017 (<a href="#B32">Schneider et al., 2018</a>). The use of machine-readable coding to verify the accuracy of drug dispensing has increased from 5.7% in 2002 to 61.9% in 2017 (<a href="#B32">Schneider et al., 2018</a>). This technology is also used to verify the accuracy of restocking automated dispensing cabinets in patient care areas. The percentage of hospitals doing this has increased from 43.3% in 2011 to 74.7% in 2017 (<a href="#B32">Schneider et al., 2018</a>). Bedside bar code reconciliation of doses during drug administration by nurses enjoys widespread use. In 2016, 92.6% of US hospitals used this technology; an increase from only 1.5% in 2002 (<a href="#B28">Pedersen et al., 2017</a>).</p>
+<a id="h7" name="h7"></a><h2>How Has This Transformed Pharmacy Practice in Hospitals?</h2>
+<p class="mb15">Dating back to Mirror of Hospital Pharmacy, there has been a commitment to advancing the role of pharmacists to improve the use of medicines in hospitals (<a href="#B31">Rogers, 2003</a>). To that end, ASHP and the ASHP Research and Education Foundation sponsor the Practice Advancement Initiative (PAI) (<a href="#B1">American Society of Health-System Pharmacists, 2018</a>). The goal of this initiative is to significantly advance the health and well-being of patients by supporting futuristic practice models that support the most effective use of pharmacists as direct patient care providers (<a href="#B4">Baines D.L. et al., 2018</a>).</p>
+<p class="mb15">A newer role for pharmacists is medication therapy management either by standing protocol or prescriber order/delegation or pharmacists have responsibility for writing medication orders, selecting doses, ordering appropriate laboratory tests, and monitoring patient response to therapy. In 2016, pharmacists managed the following therapies: vancomycin (94% of hospitals), renal dosing of antibiotics (83.9%), aminoglycosides (83.8%), anticoagulants (71.1%), nutrition support (46.9%), selection of antibiotics (19.6%), and pain management (6.2%). These percentages were higher than they were in 2013 (<a href="#B28">Pedersen et al., 2017</a>). The impact of pharmacist medication management services is measured by the following indicators: cost saving (61.5% of hospitals), patient outcomes (36.5%), federal quality of care indicators (23.7%), readmission rates (16.6%), and patient satisfaction scores (15.8%), decreases in length of stay (8.3%) (<a href="#B28">Pedersen et al., 2017</a>).</p>
+<p class="mb15">The transition of the pharmacist role from drug preparation and distribution to medication therapy management has resulted in their practice moving from a central pharmacy to the patient care areas. The following clinical areas commonly have pharmacists routinely assigned to manage therapies to a majority of patients at least 8 h/day, 5 days/week: inpatient medical-surgical (43.5% of hospitals). critical care (43.5%), oncology (37.5%), cardiology (32.9%), pediatrics (24.1%), and the emergency department (21.0%) (<a href="#B27">Pedersen et al., 2016</a>).</p>
+<p class="mb15">Besides enabling a transition in drug preparation and dispensing, technology also enables medication therapy management by pharmacists. Not all patients can or need medication therapy monitoring by pharmacists. A total of 43.4% of hospitals use computerized data mining to identify patients in need of monitoring. Some electronic health records have data mining functionality (58.6%), and others use proprietary clinical surveillance software (28.4%) to compile data needed to identify patients for daily monitoring by pharmacists (<a href="#B27">Pedersen et al., 2016</a>).</p>
+<p class="mb15">The transition of the patient from the hospital to the community (and back) is a step in health care where handoffs are missed and miscommunication occurs. Pharmacists are also becoming increasingly involved in transitions of care programs to reduce errors and improve care. Some examples of transitions of care activities by pharmacists include: use of medication histories at admission (74.9% of hospitals; in 2016 up from 54.3% in 2002), discharge medication counseling by pharmacists (46.4% from 21.7%), participation in discharge planning (35.8% up from 23.7%), handoff to community pharmacy at discharge (18.3% up from 917%), and designing a patient-specific medication-related action plan (11.2% up from 5.3%) (<a href="#B28">Pedersen et al., 2017</a>).</p>
+<p class="mb15">As a result of this change in the role of pharmacists, the percentage of them that they spend in drug distribution is now less than 20%. They spend more than 40% of their time reviewing and verifying prescription orders and almost 25% of their time on other clinical activities, including medication therapy management. Besides changes enabled by technology, pharmacy technicians are widely used in hospital pharmacy departments to support that role and activities of pharmacists. Pharmacy technicians spend almost 80% of their time in traditional drug preparation and distribution (<a href="#B27">Pedersen et al., 2016</a>).</p>
+<p class="mb0">Transitioning from a traditional drug preparation and dispensing role to a clinical role in medication therapy management has had implications for developing the hospital pharmacy workforce. Beginning in 2000, all US pharmacy graduates receive the Doctor of Pharmacy (PharmD) degree that prepares them for the increasing clinical roles that all pharmacists are realizing. These clinical roles are more common and often more advanced in the hospital setting, and additional training is available and increasingly required. These include post-graduate pharmacy residency training; both pharmacy practice (PGY1) and specialty (PGY2) programs. Board certification is also available to assess the competency of pharmacists in selected specialty practice areas through the Board of Pharmaceutical Specialties. Board certification is also available for pharmacy technicians through the Pharmacy Technician Certification Board. At present, 29.4% of hospital pharmacists have completed a PGY1 residency, 8.1% a PGY2 residency, and 23.1% are board certified. For pharmacy technicians the percentage that are board certified is much higher (77.8%) because there is no standard degree awarding program to prepare pharmacy technicians (<a href="#B32">Schneider et al., 2018</a>).</p>
+<a id="h8" name="h8"></a><h2>Summary</h2>
+<p class="mb15">There is currently a need for high quality evaluation of new technologies undertaken in a pharmacy-related setting. We aim to evaluate the use of these monitoring technologies performed in this setting. Worldwide, few evaluations of mobile health, telehealth, smart pump, and monitoring technologies in pharmacy-related setting have been published. Their quality is often below the standard necessary for inclusion in a systematic review mainly due to inadequate study design. Despite the improvements in technology, there is limited evidence on how this translates to real settings and to consumer satisfaction. Most technology driven systems required significant funding and support, particularly those involving latest technology. Rigorous comparative studies are needed to evaluate the effectiveness of different technologies (<a href="#B4">Baines D.L. et al., 2018</a>).</p>
+<p class="mb0">Nevertheless, voices within the profession of pharmacy have long called for a more important role for the pharmacist. More recently, the public began to call for improvements in the quality of health care, particularly patient safety. New systems of care, many enabled by new technologies have the potential to improve the effectiveness, safety and efficiency of health care, and transform the roles of health care professionals including pharmacists. Unfortunately, the adoption of change is slow, and even though the health of the public is at stake, change in health care is no exception. Over the past decades, however new technologies have enabled the pharmacist to devote more time to working with other health care professionals to improve the use of medicines. Since virtually every patient in the health care system receives medicines, and there is ample evidence that the use of medicines needs to improve, this is a good thing.</p>
+<a id="h9" name="h9"></a><h2>Author Contributions</h2>
+<p class="mb0">The author confirms being the sole contributor of this work and has approved it for publication.</p>
+<a id="h10" name="h10"></a><h2>Conflict of Interest Statement</h2>
+<p class="mb0">PS was employed by the company MediHealthInsight. The author declares no competing interests.</p>
+<a id="h11" name="h11"></a><h2>References</h2>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B1" id="B1"></a> American Society of Health-System Pharmacists (2018). Available at: <a href="http://www.ashpmedia.org/pai/index.html">http://www.ashpmedia.org/pai/index.html</a> [accessed June 5, 2018].</p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B2" id="B2"></a> American Society of Hospital Pharmacists (1989). ASHP statement on unit dose drug distribution. <i>Am. J. Hosp. Pharm.</i> 46:2346.</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=1146843" target="_blank">PubMed Abstract</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+statement+on+unit+dose+drug+distribution%2E&#x0026;journal=Am%2E+J%2E+Hosp%2E+Pharm%2E&#x0026;publication_year=1989" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B3" id="B3"></a>Baines, D., Bates, I., Bader, L., Hale, C., and Schneider, P. (2018). Conceptualising production, productivity and technology in pharmacy practice: a novel framework for policy, education and research. <i>Hum. Resour. Health</i> 16:51. doi: 10.1186/s12960-018-0317-5</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=30285766" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.1186/s12960-018-0317-5" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Conceptualising+production%2C+productivity+and+technology+in+pharmacy++practice%3A+a+novel+framework+for+policy%2C+education+and+research%2E&#x0026;journal=Hum%2E+Resour%2E++Health&#x0026;author=Baines+D.&#x0026;author=Bates+I.&#x0026;author=Bader+L.&#x0026;author=Hale+C.&#x0026;author=and+Schneider+P.&#x0026;publication_year=2018" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B4" id="B4"></a>Baines, D. L., Gahir, I. K., Hussain, A., Khan, A. J., Schneider, P., Hasan, S. S., et al. (2018). A scoping review of the quality and the design of evaluations of mobile health, telehealth, smart pump and monitoring technologies performed in a pharmacy-related setting. <i>Front. Pharmacol.</i> 9:678. doi: 10.3389/fphar.2018.00678</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=30093859" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.3389/fphar.2018.00678" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=A+scoping+review+of+the+quality+and+the+design+of+evaluations+of+mobile+health%2C+telehealth%2C+smart+pump+and+monitoring+technologies+performed+in+a+pharmacy-related+setting%2E&#x0026;journal=Front%2E+Pharmacol%2E&#x0026;author=Baines+D.++L.&#x0026;author=Gahir+I.++K.&#x0026;author=Hussain+A.&#x0026;author=Khan+A.++J.&#x0026;author=Schneider+P.&#x0026;author=Hasan+S.+S.&#x0026;publication_year=2018" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B5" id="B5"></a>Barker, K. N. (1969). The effects of an experimental medication system on medication errors and costs. I. Introduction and errors study. <i>Am. J. Hosp. Pharm.</i> 26, 324&#x2013;333.</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=5797287" target="_blank">PubMed Abstract</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=The+effects+of+an+experimental+medication+system+on+medication+errors+and+costs%2E+I%2E+Introduction+and+errors+study%2E&#x0026;journal=Am%2E+J%2E+Hosp%2E++Pharm%2E&#x0026;author=Barker+K.+N.&#x0026;publication_year=1969&#x0026;volume=26&#x0026;pages=324-333" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B6" id="B6"></a>Bates, D. W., Cullen, D. J., Laird, N., Petersen, L. A., Small, S. D., and Servi, D. (1995). Incidence of adverse drug events and potential adverse drug events: implication for prevention. <i>JAMA</i> 274, 29&#x2013;34. doi: 10.1001/jama.1995.03530010043033</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=8098030" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.1001/jama.1995.03530010043033" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Incidence+of+adverse+drug+events+and+potential+adverse+drug+events%3A+implication+for+prevention%2E&#x0026;journal=JAMA&#x0026;author=Bates+D.++W.&#x0026;author=Cullen+D.++J.&#x0026;author=Laird+N.&#x0026;author=Petersen+L.++A.&#x0026;author=Small+S.++D.&#x0026;author=and+Servi+D.&#x0026;publication_year=1995&#x0026;volume=274&#x0026;pages=29-34" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B7" id="B7"></a>Brennan, T. A., Leape, L. L., Laird, N. M., Localio, A. R., Lawthers, A. G., et al. (1991). Incidence of adverse events and negligence in hospitalized patients. Results of the Harvard Medical Practice Study I. <i>N. Engl. J. Med.</i> 324, 370&#x2013;376. doi: 10.1056/NEJM199102073240604</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=1987460" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.1056/NEJM199102073240604" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Incidence+of+adverse+events+and+negligence+in+hospitalized+patients%2E+Results+of+the+Harvard+Medical+Practice+Study+I%2E&#x0026;journal=N%2E+Engl%2E+J%2E+Med%2E&#x0026;author=Brennan+T.+A.&#x0026;author=Leape+L.+L.&#x0026;author=Laird+N.+M.&#x0026;author=Localio+A.+R.&#x0026;author=Lawthers+A.++G.&#x0026;publication_year=1991&#x0026;volume=324&#x0026;pages=370-376" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B8" id="B8"></a>Francke, D. E., Latiolais, C. J., Francke, G. N., and Ho, N. F. H. (1964). <i>Mirror to Hospital Pharmacy; A Report of the Audit of Pharmaceutical Service in Hospitals.</i> Washington, DC: American Society of Hospital Pharmacists.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Mirror+to+Hospital+Pharmacy%3B+A+Report+of+the+Audit+of+Pharmaceutical+Service+in+Hospitals%2E&#x0026;author=Francke+D.+E.&#x0026;author=Latiolais+C.+J.&#x0026;author=Francke+G.+N.&#x0026;author=and+Ho+N.+F.+H.&#x0026;publication_year=1964" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B9" id="B9"></a> Institute of Medicine (2000). <i>To Err Is Human: Building a Safer Health System.</i> Washington, DC: The National Academies Press.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=To+Err+Is+Human%3A+Building+a+Safer+Health+System%2E&#x0026;publication_year=2000" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B10" id="B10"></a>Leape, L. L., Brennan, T. A., Laird, N., Lawthers, A. G., Localio, A. R., Barnes, B. A., et al. (1991). The nature of adverse events in hospitalized patients. Results of the Harvard Medical Practice Study II. <i>N. Engl. J. Med.</i> 324, 377&#x2013;384. doi: 10.1056/NEJM199102073240605</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=1824793" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.1056/NEJM199102073240605" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=The+nature+of+adverse+events+in+hospitalized+patients%2E+Results+of+the+Harvard+Medical+Practice+Study+II%2E&#x0026;journal=N%2E+Engl%2E+J%2E+Med%2E&#x0026;author=Leape+L.+L.&#x0026;author=Brennan+T.+A.&#x0026;author=Laird+N.&#x0026;author=Lawthers+A.+G.&#x0026;author=Localio+A.+R.&#x0026;author=Barnes+B.++A.&#x0026;publication_year=1991&#x0026;volume=324&#x0026;pages=377-384" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B11" id="B11"></a>Lesar, T. S., Lomaestro, B. M., and Pohl, H. (1997). Medication-prescribing errors in a teaching hospital - A 9-year experience. <i>Arch. Intern. Med.</i> 157, 1569&#x2013;1576. doi: 10.1001/archinte.1997.00440350075007</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=9236558" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.1001/archinte.1997.00440350075007" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Medication-prescribing+errors+in+a+teaching+hospital+-+A+9-year+experience%2E&#x0026;journal=Arch%2E+Intern%2E+Med%2E&#x0026;author=Lesar+T.+S.&#x0026;author=Lomaestro+B.+M.&#x0026;author=and+Pohl+H.&#x0026;publication_year=1997&#x0026;volume=157&#x0026;pages=1569-1576" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B12" id="B12"></a>Lucian, L. L., Bates, D. W., Cullen, D. J., Cooper, J., Demonoco, H. J., Gallivan, T., et al. (1995). Systems analysis of adverse drug events. <i>JAMA</i> 274, 35&#x2013;43. doi: 10.1001/jama.1995.03530010049034</p>
+<p class="ReferencesCopy2"><a href="https://doi.org/10.1001/jama.1995.03530010049034" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Systems+analysis+of+adverse+drug+events%2E&#x0026;journal=JAMA&#x0026;author=Lucian+L.+L.&#x0026;author=Bates+D.+W.&#x0026;author=Cullen+D.+J.&#x0026;author=Cooper+J.&#x0026;author=Demonoco+H.+J.&#x0026;author=Gallivan+T.&#x0026;publication_year=1995&#x0026;volume=274&#x0026;pages=35-43" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B13" id="B13"></a>Pedersen, C. A., Schneider, P. J., and Santell, J. P. (2001). ASHP national survey of pharmacy practice in hospital settings: prescribing and transcribing &#x2013; 2001. <i>Am. J. Health Syst. Pharm.</i> 58, 2251&#x2013;2266.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+transcribing+-+2001%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Pedersen+C.+A.&#x0026;author=Schneider+P.+J.&#x0026;author=and+Santell+J.+P.&#x0026;publication_year=2001&#x0026;volume=58&#x0026;pages=2251-2266" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B14" id="B14"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2003). ASHP national survey of hospital pharmacy practice in hospital settings: dispensing and administration &#x2013; 2002. <i>Am. J. Health Syst. Pharm.</i> 60, 52&#x2013;68.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+hospital+pharmacy+practice+in+hospital+settings%3A+dispensing+and+administration+-+2002%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2003&#x0026;volume=60&#x0026;pages=52-68" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B15" id="B15"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2004). ASHP national survey of pharmacy practice in hospital settings: monitoring and patient education - 2003. <i>Am. J. Health Syst. Pharm.</i> 61, 457&#x2013;471.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+monitoring+and+patient+education+-+2003%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2004&#x0026;volume=61&#x0026;pages=457-471" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B16" id="B16"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2005). ASHP national survey of pharmacy practice in hospital settings: prescribing and transcribing &#x2013; 2004. <i>Am. J. Health Syst. Pharm.</i> 62, 378&#x2013;390.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+transcribing+-+2004%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2005&#x0026;volume=62&#x0026;pages=378-390" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B17" id="B17"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2006). ASHP national survey of pharmacy practice in hospital settings: dispensing and administration &#x2013; 2005. <i>Am. J. Health Syst. Pharm.</i> 63, 327&#x2013;345. doi: 10.2146/ajhp050538</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=16452519" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp050538" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+dispensing+and+administration+-+2005%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2006&#x0026;volume=63&#x0026;pages=327-345" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B18" id="B18"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2007). ASHP national survey of pharmacy practice in hospital settings: monitoring and patient education &#x2013; 2006. <i>Am. J. Health Syst. Pharm.</i> 64, 507&#x2013;520. doi: 10.2146/ajhp060669</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=17322164" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp060669" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+monitoring+and+patient+education+-+2006%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2007&#x0026;volume=64&#x0026;pages=507-520" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B19" id="B19"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2008). ASHP national survey of pharmacy practice in hospital settings: prescribing and transcribing &#x2013; 2007. <i>Am. J. Health Syst. Pharm.</i> 65, 827&#x2013;843. doi: 10.2146/ajhp080029</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=18436730" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp080029" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+transcribing+-+2007%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2008&#x0026;volume=65&#x0026;pages=827-843" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B20" id="B20"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2009). ASHP national survey of pharmacy practice in hospital settings: dispensing and administration &#x2013; 2008. <i>Am. J. Health Syst. Pharm.</i> 66, 926&#x2013;946. doi: 10.2146/ajhp080715</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=19420311" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp080715" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+dispensing+and+administration+-+2008%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2009&#x0026;volume=66&#x0026;pages=926-946" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B21" id="B21"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2010). ASHP national survey of pharmacy practice in hospital settings: monitoring and Patient Education &#x2013; 2009. <i>Am. J. Health Syst. Pharm.</i> 67, 542&#x2013;558. doi: 10.2146/ajhp090596</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=20237382" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp090596" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+monitoring+and+Patient+Education+-+2009%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2010&#x0026;volume=67&#x0026;pages=542-558" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B22" id="B22"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2011). ASHP national survey of pharmacy practice in hospital settings: prescribing and Transcribing &#x2013; 2010. <i>Am. J. Health Syst. Pharm.</i> 68, 669&#x2013;688. doi: 10.2146/ajhp100711</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=21460173" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp100711" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+Transcribing+-+2010%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2011&#x0026;volume=68&#x0026;pages=669-688" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B23" id="B23"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2012). ASHP national survey of pharmacy practice in hospital settings: dispensing and Administration &#x2013; 2011. <i>Am. J. Health Syst. Pharm.</i> 69, 768&#x2013;785. doi: 10.2146/ajhp110735</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=22517022" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp110735" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+dispensing+and+Administration+-+2011%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2012&#x0026;volume=69&#x0026;pages=768-785" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B24" id="B24"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2013). ASHP national survey of pharmacy practice in hospital settings: monitoring and Patient Education &#x2013; 2012. <i>Am. J. Health Syst. Pharm.</i> 70, 787&#x2013;803. doi: 10.2146/ajhp120777</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=23592362" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp120777" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+monitoring+and+Patient+Education+-+2012%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2013&#x0026;volume=70&#x0026;pages=787-803" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B25" id="B25"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2014). ASHP national survey of pharmacy practice in hospital settings: prescribing and transcribing &#x2013; 2013. <i>Am. J. Health Syst. Pharm.</i> 71, 924&#x2013;942. doi: 10.2146/ajhp140032</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=24830997" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp140032" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+transcribing+-+2013%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2014&#x0026;volume=71&#x0026;pages=924-942" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B26" id="B26"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2015). ASHP national survey of pharmacy practice in hospital settings: dispensing and administration &#x2013; 2014. <i>Am. J. Health Syst. Pharm.</i> 72, 1119&#x2013;1137. doi: 10.2146/ajhp150032</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=26092963" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp150032" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+dispensing+and+administration+-+2014%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2015&#x0026;volume=72&#x0026;pages=1119-1137" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B27" id="B27"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2016). ASHP national survey of pharmacy practice in hospital settings: monitoring and patient education &#x2013; 2015. <i>Am. J. Health Syst. Pharm.</i> 73, 1307&#x2013;1330. doi: 10.2146/ajhp160081</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=27413141" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp160081" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+monitoring+and+patient+education+-+2015%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2016&#x0026;volume=73&#x0026;pages=1307-1330" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B28" id="B28"></a>Pedersen, C. A., Schneider, P. J., and Scheckelhoff, D. J. (2017). ASHP national survey of pharmacy practice in hospital settings: prescribing and transcribing &#x2013; 2016. <i>Am. J. Health Syst. Pharm.</i> 74, 1336&#x2013;1352. doi: 10.2146/ajhp170228</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=28743758" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp170228" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+prescribing+and+transcribing+-+2016%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Pedersen+C.++A.&#x0026;author=Schneider+P.++J.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2017&#x0026;volume=74&#x0026;pages=1336-1352" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B29" id="B29"></a>Ringold, D. J., Santell, J. P., Schneider, P. J., and Arenberg, S. (1999). ASHP national survey of pharmacy practice in acute care settings, part 1: prescribing and transcribing. <i>Am. J. Health Syst. Pharm.</i> 56, 142&#x2013;157.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+acute+care+settings%2C+part+1%3A+prescribing+and+transcribing%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Ringold+D.+J.&#x0026;author=Santell+J.+P.&#x0026;author=Schneider+P.+J.&#x0026;author=and+Arenberg+S.&#x0026;publication_year=1999&#x0026;volume=56&#x0026;pages=142-157" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B30" id="B30"></a>Ringold, D. J., Santell, J. P., Schneider, P. J., and Kelly, E. J. (2000). ASHP national survey of pharmacy practice in acute care settings, part 2: dispensing and administration. <i>Am. J. Health Syst. Pharm.</i> 57, 1759&#x2013;1775.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+acute+care+settings%2C+part+2%3A+dispensing+and+administration%2E&#x0026;journal=Am%2E+J%2E+Health+Syst%2E+Pharm%2E&#x0026;author=Ringold+D.+J.&#x0026;author=Santell+J.+P.&#x0026;author=Schneider+P.+J.&#x0026;author=and+Kelly+E.+J.&#x0026;publication_year=2000&#x0026;volume=57&#x0026;pages=1759-1775" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B31" id="B31"></a>Rogers, E. M. (2003). <i>Diffusion of Innovations.</i> New York, NY: Free Press.</p>
+<p class="ReferencesCopy2"><a href="http://scholar.google.com/scholar_lookup?&#x0026;title=Diffusion+of+Innovations%2E&#x0026;author=Rogers+E.+M.&#x0026;publication_year=2003" target="_blank">Google Scholar</a></p>
+</div>
+<div class="References" style="margin-bottom:0.5em;">
+<p class="ReferencesCopy1"><a name="B32" id="B32"></a>Schneider, P. J., Pedersen, C. A., and Scheckelhoff, D. J. (2018). ASHP national survey of pharmacy practice in hospital settings: dispensing and administration &#x2013; 2017. <i>Am. J. Health Syst. Pharm.</i> 75, 1203&#x2013;1226. doi: 10.2146/ajhp180151</p>
+<p class="ReferencesCopy2"><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&#x0026;Cmd=ShowDetailView&#x0026;TermToSearch=29903709" target="_blank">PubMed Abstract</a> | <a href="https://doi.org/10.2146/ajhp180151" target="_blank">CrossRef Full Text</a> | <a href="http://scholar.google.com/scholar_lookup?&#x0026;title=ASHP+national+survey+of+pharmacy+practice+in+hospital+settings%3A+dispensing+and+administration+-+2017%2E&#x0026;journal=Am%2E++J%2E++Health+Syst%2E++Pharm%2E&#x0026;author=Schneider+P.++J.&#x0026;author=Pedersen+C.++A.&#x0026;author=and+Scheckelhoff+D.++J.&#x0026;publication_year=2018&#x0026;volume=75&#x0026;pages=1203-1226" target="_blank">Google Scholar</a></p>
+</div>
+</div>
+<div class="thinLineM20"></div>
+<div class="AbstractSummary">
+<p><span>Keywords</span>: hospital pharmacy, medication therapy management, clinical pharmacy, medication technology, patient safety</p>
+<p><span>Citation:</span> Schneider PJ (2018) The Impact of Technology on Safe Medicines Use and Pharmacy Practice in the US. <i>Front. Pharmacol.</i> 9:1361. doi: 10.3389/fphar.2018.01361</p>
+<p id="timestamps">
+<span>Received:</span> 27 June 2018; <span>Accepted:</span> 05 November 2018;<br/><span>Published:</span> 20 November 2018.</p>
+<div>
+<p>Edited by:</p>
+<a href="https://loop.frontiersin.org/people/510287/overview">Darrin Lloyd Baines</a>, Bournemouth University, United Kingdom</div>
+<div>
+<p>Reviewed by:</p>
+<a href="https://loop.frontiersin.org/people/118627/overview">Fathi M. Sherif</a>, University of Tripoli, Libya<br/>
+<a href="https://loop.frontiersin.org/people/30918/overview">Sunita Nair</a>, Mumbai University, India</div>
+<p><span>Copyright</span> &#x00A9; 2018 Schneider. This is an open-access article distributed under the terms of the <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License (CC BY)</a>. The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</p>
+<p><span>*Correspondence:</span> Philip J. Schneider, <a href="mailto:schneider633@gmail.com">schneider633@gmail.com</a></p>
+<div class="clear"></div>
+</div>                
+                <div class="thin-line-dark"></div>
+                    <div class="social-feed"></div>
+                    <div class="container-bordered comment-list social-feed">
+                        <div class="container-comments">                           
+                        </div>
+
+                        <div class="loading-wrapper" style="padding-left: 49%">
+                            <img style="padding-top: 5%; padding-bottom: 5%;" src="/areas/research-topics/Content/Images/frontiers/common/icon/loading.gif" alt="Loading.." />
+                        </div>                       
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+            <div class="clearfix visible-sm"></div>
+
+            
+    <div class="c col-xs-12 col-sm-12 col-lg-2 col-md-3 pull-right side-article related right-container-articles" style="clear: right !important">
+        
+        <article class="widget-listing commentary-article hidden">
+            <h5 class="like-h4">COMMENTARY</h5>
+        </article>
+
+        <article class="widget-listing original-article hidden">
+            <h5 class="like-h4">ORIGINAL ARTICLE</h5>
+        </article>
+
+        <article class="widget-listing people-also-looked-at side-article-related hidden">
+            <h5 class="like-h4">People also looked at</h5>
+        </article>
+            <div class="side-article-mrk clearfix hidden-md hidden-lg">
+                <p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><img src="https://3718aeafc638f96f5bd6-d4a9ca15fc46ba40e71f94dec0aad28c.ssl.cf1.rackcdn.com/article-marketing-message-79982763-254d-4bb6-96b8-126758de1166.png" alt="" /><br /></a></p>
+<p style="text-align: center;"><a href="https://spotlight.frontiersin.org/submit?utm_source=fweb&amp;utm_medium=fjour&amp;utm_campaign=rtlg_2020_gen"><strong>Suggest a Research Topic &gt;</strong></a></p>
+            </div>
+
+
+    </div>
+
+
+        </div>
+    </div>
+</div>
+<div id="divTemplates">
+    <div class="modal fade modal-container impact-modal-container" data-backdrop="static" id="impactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+</div>
+
+
+
+
+
+    <div class="modal fade modal-container supplementary-modal-container"
+     data-backdrop="static"
+     data-keyboard="false"
+     id="supplementaryFilesModal"
+     tabindex="-1" role="dialog"
+     aria-labelledby="mySupplementaryModalLabel"
+     aria-hidden="true">
+</div>
+
+
+
+
+<script type="text/template" id="template-supplementary-files-modal">
+    <div class="supplementary-material-wrapper modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a>
+                <h4>Supplementary Material</h4><br>
+                <p class="supplementary-empty-message">There is no supplementary material currently available for this article</p>
+                <div class="loading-wrapper"
+                     id="loader"
+                     style="display:none">
+                    Loading supplemental data...
+                    <img style="" src="/Areas/Articles/Images/Icon/loading.gif" alt="Loading.." />
+                </div>
+                <br />
+                <div class="table-responsive" id="localFiles">
+                </div>
+                <div id="figshare-widget-container">
+
+                </div>
+            </div>
+            <br />
+            <div class="modal-footer bottom-links">
+                <a class="btn btn-default" data-dismiss="modal">Close</a>
+            </div>
+        </div>
+
+    </div>
+</script>
+
+
+
+
+
+<script type="text/template" id="template-local-files-modal">
+    <table class="table table-striped supplementary-content" id="localFilesTable">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>File Name</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody class="file-content">
+            <% _.each(supplimentalFileDetails.FileDetails, function(fileViewModel){   %>
+            <tr>
+                <th scope="row"><a data-test-id="<%= fileViewModel.TestId %>" href="<%= fileViewModel.FileDownloadUrl %>"><img class="img-figure" src="<%= fileViewModel.ImageUrl %>"></a></th>
+                <td>
+                    <a  href="<%= fileViewModel.FileDownloadUrl %>">
+                        <%= fileViewModel.FileName %>
+                    </a>
+                </td>
+                <td><a  href="<%= fileViewModel.FileDownloadUrl %>" class="btn-link"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</script>
+
+
+
+
+
+
+
+    <div class="modal fade modal-container notifyme-modal-container" data-backdrop="static" id="notifyModal" tabindex="-1" role="dialog" aria-labelledby="Notify on publication" aria-hidden="true">
+</div>
+
+
+
+<script type="text/template" id="template-notify-me-modal">
+    <div class="modal-f page-container simple-modal" role="dialog" aria-labelledby="NotfifyMeModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form onsubmit="return false" id="modalnotifyme">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h3>Notify me on publication</h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label>Please enter your email address:</label>
+                            <input type="email" required class="form-control" id="txt_notification_email_id" placeholder="Email">
+                            </div>
+
+                        <div class="g-recaptcha" id="recaptcha"></div><br />
+
+                        <p class="small" style="color: #555;">If you already have an account, please <a href="<%=login.FrontiersLoginUrl%>?returnUrl=<%=currentPage%>" class="text-blue">login</a>.</p>
+                        <p class="small" style="color: #555;">You don't have a Frontiers account ? You can <a href="<%=login.FrontiersRegistrationUrl%>" class="text-blue">register here</a>.</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" id="article_notify_non_registered_user" class="btn btn-default btn-progress" style="width: 118px; visibility:hidden;">Notify me</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</script>
+
+<script type="text/template" id="template-notifyme-mailselection-modal">
+    <div class="modal-f page-container simple-modal" tabindex="-1" role="dialog" aria-labelledby="NotfifyMeModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h3>Select one of your emails</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>You have multiple emails registered with Frontiers:</label>
+                        </div>
+                                           
+                        <% _.each(userEmailList, function(user){   %>
+                        <input type="radio" value="<%=user%>" name="notify_Emailcollection"> <%=user%><br>
+                        <% }); %>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="article_notify_loggedin_user" class="btn btn-default btn-progress" style="width: 118px;">Notify me</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+<script type="text/template" id="template_notifyme_error_modal">
+    <div class="modal-f page-container simple-modal" tabindex="-1" role="dialog" aria-labelledby="NotfifyMeModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h3>Notify me on publication</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <p class="text-red"><strong><%=message%></strong></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default btn-progress" style="width: 118px;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+
+    
+
+<script type="text/template" id="template-article-comments">
+
+    <div class="w100pc float_left CommentsHolder" id="div_article_comment_holder">
+        <% if(journalComments.Count !=0) { %>
+        <div id="divActivityBox" class="commentBox bubbleInfo " style="z-index: 300;">
+            <div class="float_left w100pc divActivityBox">
+                <p id="pAllUsers" class="pb0 float_left w581 pAllUsers">
+                    <a id="aAllUsers" href="javascript:void(0);" class="fontnormal trigger">
+                        <%- journalComments.Count %> Comments
+                    </a> <%= journalComments.CommentedUsers %>
+                </p>
+            </div>
+        </div>
+        <% } %>
+
+        <% _.each( journalComments.Comments, function( comment ){ %>
+
+        <div class="commentBox">
+
+            <% if (comment.IsDeleted) {%>
+
+            <div class="wrapper pt4 pb4">
+                <div class="imgHolder mr10"> <!--<a  class="fontnormal">--><img width="32" src="/Areas/Articles/Design/Images/default_profile_32.jpg" onerror="if (!this.src.endsWith('/Areas/Articles/Design/Images/default_profile_32.jpg')) this.src='/Areas/Articles/Design/Images/default_profile_32.jpg';" alt=""><!--</a>--></div>
+                <div class="content w555">
+                    <!-- <p class="mtm3" style='word-wrap:break-word'><a  class="fontnormal">User</a> </p>-->
+                    <p class="mtm3">User</p><ul class="toolbar mt4 disblk w100pc">
+                        <li class="pl0">
+                            <p class="date">Comment deleted on <%- GetFormattedCommentDeletedDate(comment.CommentedDate) %></p>
+                        </li>
+                        <li class="float_right pr0"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <% } else {%>
+
+            <div class="wrapper pt4 pb4">
+                <div class="imgHolder mr10"> <a class="fontnormal" data-test-id="article_commenteduser_profileimage_link" href="<%- comment.CommentedUser.ProfileUrl %>"><img src="<%- comment.CommentedUser.ThumbnailUrl %>" onerror="if (!this.src.endsWith('/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg')) this.src='/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg';" alt=""></a></div>
+                <div class="content w555 comment-body">
+                    <p class="mtm3" style="word-wrap:break-word">
+                        <a class="fontnormal" data-test-id="article_commenteduser_profile_link" href="<%- comment.CommentedUser.ProfileUrl %>">
+                            <%- comment.CommentedUser.FullName %>
+                        </a>
+                        <span class="comment-text"><%= comment.Comment %></span>
+                    </p>
+                    <ul class="toolbar mt4 disblk w100pc">
+                        <li class="pl0"><p class="date"><%- GetFormattedCommentDate(comment.CommentedDate) %></p></li>
+                        <% if (comment.IsEditVisible)
+                        { %>
+                        <li>|</li>
+                        <li><a href="javascript:void(0);" data-test-id="article_comment_edit_link" class="fontnormal btn-edit-comment" id="btnEditcom" data-comment-id="<%- comment.CommentId %>">Edit</a></li>
+                        <% } %>
+                        <% if (comment.IsDeleteVisible)
+                        { %>
+                        <li>|</li>
+                        <li><a href="javascript:void(0);" data-test-id="article_comment_delete_link" class="fontnormal btn-delete-comment" id="btnDeletecom" data-comment-id="<%- comment.CommentId %>">Delete</a></li>
+                        <% }%>
+                        <li class="float_right pr0"></li>
+                    </ul>
+                </div>
+            </div>
+            <% }%>
+        </div>
+
+        <%  }); %>
+    </div>
+
+    <div id="div_add_comment" class="commentBox">
+        <div class="imgTn32"
+             style="display: none;">
+            <% if(journalComments.LoginUserId !=0) { %>
+            <img src="<%- journalComments.LoggedInUserInfo.ThumbnailUrl %>" alt=""
+                 onerror="if (!this.src.endsWith('/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg')) this.src='/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg';">
+            <% } else {%>
+            <img src="/Areas/Articles/Design/Images/default_profile_32.jpg" alt=""
+                 onerror="if (!this.src.endsWith('/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg')) this.src='/Areas/Articles/Images/Frontiers/Common/Profile/default_profile_32.jpg';">
+            <% }%>
+
+        </div>
+        <div class="wrapper pt4 pb4 wAuto">
+            <textarea onfocus="showUserImageOnAdd(this)"
+                      onblur="hideUserImage(this)"
+                      id="txt_comment"
+                      cols=""
+                      rows="1"
+                      style="overflow: hidden; word-wrap: break-word; resize: horizontal;"
+                      data-test-id="article_comment_add_textarea"
+                      class="write setfocus autoext w535 frUIResizeTextArea comment-textarea is-ui animated-resize grey_90">Write a comment...</textarea>
+        </div>
+        <div class="commentAddWrap">
+            <div>
+                <a class="addBtnComment" data-test-id="article_comment_add_button"  onclick="javascript:AddComments(this);" href="javascript:void(0);" id="btnAddcom"><span>Add</span></a>
+            </div>
+        </div>
+    </div>
+
+
+</script>
+
+<script type="text/template" id="template-article-comments-warning">
+    <div class="commentBox">
+        <div class="wrapper">
+            <p class="comment-warning">The comment section has been closed.</p>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="template-article-edit-comments">
+
+
+    <div id="edit-comment-form" class="wrapper pt4 pb4 wAuto edit-comments">
+        <textarea class="txt-comment"
+                  onfocus="showUserImageOnEdit(this)"
+                  onblur="hideUserImage(this)"
+                  data-test-id="article_comment_edit_textarea"
+                  rows="3"><%= commentText %> </textarea>
+        <div>
+            <a class="btn btn-add-comment addBtnComment" data-test-id="article_comment_edit_button" data-comment-id="<%- commentId %>">Add</a>
+        </div>
+    </div>
+
+</script>
+
+
+
+</div>
+
+    </div>
+
+        <div data-navigation-plugin="footer"></div>
+        <script src="https://static.frontiersin.org/navigation-plugins/footer/js"></script>
+
+
+    <script src="https://crossmark.crossref.org/javascripts/v1.5/crossmark.min.js"></script>
+        <script type="text/javascript">
+
+            var $ = jQuery.noConflict(); //==>>ToDo: Avoid this..!!
+        </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+ 
+<script src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+    <script src="https://static.frontiersin.org/areas/articles/js/frontiers?v=xhs8eKqLiviQahQMa5Ch3ODqlA9v1uo1B2WtMMCXfVA1"></script>
+
+
+    <script type="text/javascript">
+
+        var FRArticle = (function() {
+            return {
+                ArticleId: '410398',
+                DOI:'10.3389/fphar.2018.01361',
+                LoginUserId: '0',
+                DomainId: '1',
+                FieldId: '62',
+                SpecialityId: '858',
+                IsPreview: FRSafe.boolean('False'),
+                IsViewImpactFromLoop: FRSafe.boolean('False'),
+                IsPublished: 'True',
+                FigShareApiUrl: 'https://api.figshare.com/v2/collections/search',
+                FigShareTimeOut: '3000',
+                ProvisionallyAcceptedText: 'The final version of the article will be published here soon pending final quality checks',
+                NotifyMeButtonText: 'Notify me',
+                NotifyMeButtonSecondaryText: 'We&#39;ll notify you at publication'
+            };
+        })();
+
+        var FRSocial = (function() {
+            return {
+                itemId: 14,
+                itemTypeId: 1,
+                entityId: '410398',
+                ownerId: '528395',
+                sanPath: 'https://www.frontiersin.org/files/',
+                subItemId: '8',
+                loginUserId: '0',
+                ownerNWDBId: '26',
+                pageType: 1,
+                loopUrl:'https://loop.frontiersin.org'
+            };
+        })();
+    </script>
+
+    <script>
+        var FRAjaxSettings = (function () {
+
+            function urlLowercase() {
+                $.ajaxSetup({
+                    beforeSend: function (jqXHR, settings) {
+                        settings.url = settings.url.toLowerCase();
+                    }
+                });
+            }
+
+            return { urlLowercase: urlLowercase };
+        })();
+
+        FRAjaxSettings.urlLowercase();
+    </script>
+
+    <script src="https://static.frontiersin.org/areas/articles/js/schema?v=13am1aL5JpCh_IIFOIFRdlFySxVv16JLaVykDEyHCu81"></script>
+
+
+
+    
+    <script src="/areas/articles/js/app?v=uC9Es8wJ9fbTy8Rj4KipiyIXvhx7XEVhCTHvIrM4ShA1"></script>
+
+    <script src="https://widgets.figshare.com/static/figshare.js"></script>
+
+</body>
+</html>

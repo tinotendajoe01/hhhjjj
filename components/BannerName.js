@@ -13,14 +13,14 @@ function BannerName({ name, discount, more }) {
           <h3>Good Afternoon {name}!</h3>
         )
       ) : (
-        <h3>Good Evening {name}!</h3>
+        <h3>Good Morning {name}!</h3>
       )}
       <p>
-        Get free discount for every{" "}
-        <span className="text-kenlink_green">{`${currency}${discount}`}</span>{" "}
-        purchase
+        How are you feeling today?{" "}
+        {/* <span className="text-kenlink_green">{`${currency}${discount}`}</span>{" "} */}
+        I am here if you need me.{" "}
       </p>
-      <a href={more}>Learn More</a>
+      <a href={more}>Lets Talk</a>
     </div>
   );
 }

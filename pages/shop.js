@@ -17,7 +17,7 @@ import SliderHero from "../components/SliderHero";
 
 import Rating from "@material-ui/lab/Rating";
 
-export default function Gifts({ products, giftsProducts }) {
+export default function Home({ products, topRatedProducts, featuredProducts }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
 
@@ -43,31 +43,38 @@ export default function Gifts({ products, giftsProducts }) {
       <Header products={products} />
       <Layout description="lorem">
         <main className="max-w-7xl m-auto">
-          {/* <SliderHero /> */}
+          <SliderHero />
           <section>
             <div className="pl-1 font-bold text-xl">
               <Typography className="pl-1 font-bold text-xl " variant="h5">
-                Gift Sets
+                Best Sellers
               </Typography>
             </div>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {giftsProducts?.map((product) => (
-                <div className="border bg-[#F8F9FA] rounded-xl shadow-sm z-30">
+              {topRatedProducts?.map((product) => (
+                <div
+                  // bg-[#F8F9FA]
+                  key={product._id}
+                  className="border  rounded-xl shadow-sm z-30"
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image
                         src={product.image}
                         layout="fill"
                         objectFit="contain"
-                        className="rounded-2xl"
+                        className="rounded-2xl text-red-700"
                       />
                     </div>
                   </NextLink>
 
                   <div className=" flex flex-col items-center ">
-                    <h1 className="">{product.name}</h1>
-                    <Rating value={product.rating} readOnly></Rating>
-
+                    <h1 className="">{product.name}</h1>{" "}
+                    <Rating
+                      className=""
+                      value={product.rating}
+                      readOnly
+                    ></Rating>
                     <h4 className="font-bold">${product.price}</h4>
                   </div>
 
@@ -92,8 +99,11 @@ export default function Gifts({ products, giftsProducts }) {
               Featured
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {giftsProducts?.map((product) => (
-                <div className="border bg-transparent rounded-xl shadow-sm ">
+              {featuredProducts?.map((product) => (
+                <div
+                  key={product._id}
+                  className="border bg-transparent rounded-xl shadow-sm "
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image
@@ -130,8 +140,11 @@ export default function Gifts({ products, giftsProducts }) {
               Recommended
             </Typography>
             <div className="flex space-x-3 overflow-scroll scrollbar-hide  pl-1 pb-1 ">
-              {giftsProducts?.map((product) => (
-                <div className="border bg-transparent rounded-xl shadow-sm ">
+              {featuredProducts?.map((product) => (
+                <div
+                  key={product._id}
+                  className="border bg-transparent rounded-xl shadow-sm "
+                >
                   <NextLink href={`/product/${product.slug}`} passHref>
                     <div className="relative rounded-2xl h-20 w-40 md:h-52 md:w-80 flex-shrink-0 z-30">
                       <Image
@@ -171,13 +184,14 @@ export default function Gifts({ products, giftsProducts }) {
 
 export async function getServerSideProps() {
   await db.connect();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
-  const giftsProductsDocs = await Product.find(
-    { isGift: true },
+  const featuredProductsDocs = await Product.find(
+    { isFeatured: true },
     "-reviews"
-  ).lean();
-  // .limit(3);
+  )
+    .lean()
+    .limit(6);
   const topRatedProductsDocs = await Product.find({}, "-reviews")
     .lean()
     .sort({
@@ -188,7 +202,7 @@ export async function getServerSideProps() {
   return {
     props: {
       products: products.map(db.convertDocToObj),
-      giftsProducts: giftsProductsDocs.map(db.convertDocToObj),
+      featuredProducts: featuredProductsDocs.map(db.convertDocToObj),
       topRatedProducts: topRatedProductsDocs.map(db.convertDocToObj),
     },
   };

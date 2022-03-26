@@ -254,7 +254,7 @@ function PlaceOrder({ products }) {
 export default dynamic(() => Promise.resolve(PlaceOrder), { ssr: false });
 export async function getServerSideProps() {
   await db.connect();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
   await db.disconnect();
   return {

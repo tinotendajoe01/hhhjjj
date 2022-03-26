@@ -337,7 +337,7 @@ export async function getServerSideProps({ query }) {
     ...brandFilter,
     ...ratingFilter,
   });
-  const products1 = await Product.find({}).lean();
+  const products1 = await Product.find({}, "-reviews").lean();
 
   await db.disconnect();
 

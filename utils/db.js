@@ -41,9 +41,10 @@ function convertDocToObj(doc) {
   doc._id = doc._id.toString();
   doc.createdAt = doc.createdAt.toString();
   doc.updatedAt = doc.updatedAt.toString();
+  // doc.products[].reviews[].user = doc.products.reviews.toString();
   return doc;
 }
-console.log(process.env.MONGODB_URI);
+// console.log(process.env.MONGODB_URI);
 const db = { connect, disconnect, convertDocToObj };
 
 export default db;

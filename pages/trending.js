@@ -282,7 +282,7 @@ export default all;
 export async function getServerSideProps() {
   await db.connect();
   const cats = await Cats.find({}).lean();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
   const topRatedProductsDocs = await Product.find({}, "-reviews")
     .lean()

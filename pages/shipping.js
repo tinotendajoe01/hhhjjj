@@ -16,6 +16,7 @@ import CheckoutWizard from "../components/CheckoutWizard";
 import Header from "../components/Header";
 import Product from "../models/Product";
 import db from "../utils/db";
+import { dividerClasses } from "@mui/material";
 export default function Shipping({ products }) {
   const {
     handleSubmit,
@@ -273,7 +274,7 @@ export default function Shipping({ products }) {
 }
 export async function getServerSideProps() {
   await db.connect();
-  const products = await Product.find({}).lean();
+  const products = await Product.find({}, "-reviews").lean();
 
   await db.disconnect();
   return {

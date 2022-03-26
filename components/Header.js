@@ -26,7 +26,6 @@ import {
   Typography,
   Container,
   Link,
-  createMuiTheme,
   TableContainer,
   Table,
   ThemeProvider,
@@ -73,22 +72,14 @@ const Header = ({ title, description, products }) => {
     router.push("/cart");
   };
   const { state, dispatch } = useContext(Store);
-  const { cart, userInfo } = state;
+  const { cart, userInfo, darkMode } = state;
 
   const router = useRouter();
-
-  // const [query, setQuery] = useState("");
-  // const queryChangeHandler = (e) => {
-  //   setQuery(e.target.value);
-  // };
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   router.push(`/search?query=${query}`);
-  // };
-
-  // const runSearch = () => {
-  //   router.push(`/search?query=${query}`);
-  // };
+  const darkModeChangeHandler = () => {
+    dispatch({ type: darkMode ? "DARK_MODE_OFF" : "DARK_MODE_ON" });
+    const newDarkMode = !darkMode;
+    Cookies.set("darkMode", newDarkMode ? "ON" : "OFF");
+  };
   const [wordEntered, setWordEntered] = useState("");
 
   const [searchInput, setSearchInput] = useState([]);
@@ -270,7 +261,7 @@ const Header = ({ title, description, products }) => {
             <Image
               onClick={() => router.push("/")}
               className="sm:w-1 cursor-pointer "
-              src="/logo2.png"
+              src="/zlogo (6).png"
               width={150}
               height={40}
               objectFit="contain"
@@ -334,10 +325,10 @@ const Header = ({ title, description, products }) => {
             <li className="cursor-pointer ">Deals</li>
           </NextLink>
           <NextLink href="/gifts" passHref>
-            <li className="cursor-pointer ">Gifts</li>
+            <li className="cursor-pointer ">Tips</li>
           </NextLink>
           <li onClick={uploadMobileOpenHandler} className="cursor-pointer ">
-            Upload Rx
+            Community
           </li>
 
           <li className="hidden cursor-pointer lg:inline-flex">OTC</li>
@@ -349,6 +340,12 @@ const Header = ({ title, description, products }) => {
           <li className="hidden  cursor-pointerlg:inline-flex">Toolkits</li>
           <li className="hidden  cursor-pointerlg:inline-flex">
             Health & Personal Care
+          </li>
+          <li>
+            <Switch
+              checked={darkMode}
+              onChange={darkModeChangeHandler}
+            ></Switch>
           </li>
         </div>
         <div className="flex items-center">
